@@ -13,17 +13,6 @@ website:
     right:
       - icon: github
         href: https://github.com
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - Week1R4DS.qmd
-      - Week2HW.qmd
-      - Week3HW.qmd
-      - Week4HW.qmd
-      - Week2HW.qmd
-  page-navigation: true
-
 format:
   html:
     theme: yeti
