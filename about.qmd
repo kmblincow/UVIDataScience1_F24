@@ -1,0 +1,17 @@
+---
+title: "About"
+format: 
+  html:
+    code-fold: false
+    code-tools: false
+editor: visual
+---
+
+### Course Description
+
+DATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\
+Prerequisites: MAT 140 or MAT 143.
+
+#### Contact
+
+Kayla Blincow: kayla.israel\@uvi.edu
