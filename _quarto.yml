@@ -21,6 +21,7 @@ website:
       - Week2HW.qmd
       - Week3HW.qmd
       - Week4HW.qmd
+      - Week2HW.qmd
   page-navigation: true
 
 format:
