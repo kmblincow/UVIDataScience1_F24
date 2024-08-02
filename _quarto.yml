@@ -20,18 +20,6 @@ website:
       - Week1R4DS.qmd
       - Week2HW.qmd
       - Week3HW.qmd
-      - Week4HW.qmd
-      - Week5HW.qmd
-      - Week6HW.qmd
-      - Week7HW.qmd
-      - Week8HW.qmd
-      - Week9HW.qmd
-      - Week10HW.qmd
-      - Week11HW.qmd
-      - Week12HW.qmd
-      - Week13HW.qmd
-      - Week14HW.qmd
-      - Week15HW.qmd
   page-navigation: true
 
 format:
