@@ -1,0 +1,153 @@
+[
+  {
+    "objectID": "Week1R4DS.html",
+    "href": "Week1R4DS.html",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.\nFor this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.\nA couple vocabulary words:\n\ncode chunk: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run\nWebR code chunk: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section\n\n\n\nThese are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCan you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry the exercises from the text below. When you have completed them share a screenshot of your outputs for each questions to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "Week1R4DS.html#coding-basics",
+    "href": "Week1R4DS.html#coding-basics",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "These are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "Week1R4DS.html#comments",
+    "href": "Week1R4DS.html#comments",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "Week1R4DS.html#whats-in-a-name",
+    "href": "Week1R4DS.html#whats-in-a-name",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Can you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "Week1R4DS.html#calling-functions",
+    "href": "Week1R4DS.html#calling-functions",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "Week1R4DS.html#exercises",
+    "href": "Week1R4DS.html#exercises",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each questions to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Home",
+      "Week 1 Homework: R4DS Exercises"
+    ]
+  },
+  {
+    "objectID": "part_1_prep.html",
+    "href": "part_1_prep.html",
+    "title": "Preparation",
+    "section": "",
+    "text": "Page without code\n\n\n\nThis page contains an example for some structured preparation information for a workshop. No code is executed here.\nHere are some preparation information for the participants."
+  },
+  {
+    "objectID": "part_1_prep.html#software",
+    "href": "part_1_prep.html#software",
+    "title": "Preparation",
+    "section": "Software",
+    "text": "Software\nIn this workshop we will be using R. You can either\n\nhave R and Rstudio installed on your laptop\nor, use Posit cloud (formerly Rstudio Cloud).\n\nPosit cloud is free of charge for personal users, yet you need to sign up for a new user account and have internet connection.\nThe R package we are using is glmnet."
+  },
+  {
+    "objectID": "part_1_prep.html#data",
+    "href": "part_1_prep.html#data",
+    "title": "Preparation",
+    "section": "Data",
+    "text": "Data\nThe datasets we use can be found here (insert link)."
+  },
+  {
+    "objectID": "part_1_prep.html#code",
+    "href": "part_1_prep.html#code",
+    "title": "Preparation",
+    "section": "Code",
+    "text": "Code\nThe R scripts used in part 1 and part 2 can be found here (insert link)."
+  },
+  {
+    "objectID": "part_1_prep.html#resources",
+    "href": "part_1_prep.html#resources",
+    "title": "Preparation",
+    "section": "Resources",
+    "text": "Resources\nLecture notes (insert link)\nLab notes (insert link)"
+  },
+  {
+    "objectID": "Week3HW.html",
+    "href": "Week3HW.html",
+    "title": "Week 3 Homework",
+    "section": "",
+    "text": "Coming soon :)",
+    "crumbs": [
+      "Home",
+      "Week 3 Homework"
+    ]
+  },
+  {
+    "objectID": "part_2_eda.html",
+    "href": "part_2_eda.html",
+    "title": "Part I",
+    "section": "",
+    "text": "Page with R code\n\n\n\nThis page contains an example template for a lab session, where R code and results are displayed here.\nYou can find more information on how to include code in Quarto website here.\nYou can experiment with code-fold and code-tools in the yaml header above to change how the code cells look like."
+  },
+  {
+    "objectID": "part_2_eda.html#a-cancer-modeling-example",
+    "href": "part_2_eda.html#a-cancer-modeling-example",
+    "title": "Part I",
+    "section": "A Cancer Modeling Example",
+    "text": "A Cancer Modeling Example\nExercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.\nPlease run the code provided to replicate some of the analyses. Make sure you can explain what all the analysis steps do and that you understand all the results.\nIn addition, there are some extra tasks (Task 1), where no R code is provided. Please do these tasks when you have time available at the end of the lab.\n\nLoad the data\nRead the data, and convert to matrix format.\n\nmrna &lt;- read.table(\"data/data_example.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmrna &lt;- as.matrix(mrna)\n\nPrint the data\n\nmrna[1:4, 1:4]\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nVisualise the overall distribution of expression levels by histogram\n\nhist(mrna, nclass=40, xlim=c(-5,5), col=\"lightblue\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask 1\n\n\n\nThis is a callout-note, and it can be quite useful for exercises. You can find more about callout here.\nExample: Extend the above analysis to cover all genes."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Course Description\nDATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\nPrerequisites: MAT 140 or MAT 143.\n\nContact\nKayla Blincow: kayla.israel@uvi.edu"
+  },
+  {
+    "objectID": "Week2HW.html",
+    "href": "Week2HW.html",
+    "title": "Week 2 Homework",
+    "section": "",
+    "text": "Coming Soon :)",
+    "crumbs": [
+      "Home",
+      "Week 2 Homework"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CSC/SCI 230: Data Science 1",
+    "section": "",
+    "text": "Instructor: Kayla Blincow, PhD (aka Kayla Israel)\n\n\nWelcome!\nThis website houses all of the coding exercises and assignments for CSC/SCI 230 Data Science 1. All other course documentation can be found on Brightspace.\n\n\nSchedule\n\n\n\nWeek\nDates\nMaterials\n\n\n\n\n1\n8/19 - 8/23\nHomework 1\n\n\n2\n8/26 - 8/30\nHomework 2\n\n\n3\n9/3 - 9/6\nHomework 3\n\n\n4\n9/9 - 9/13\nHomework 4\n\n\n5\n9/16 - 9/20\nHomework 5\n\n\n6\n9/23 - 9/27\nHomework 6\n\n\n7\n9/30 - 10/4\nHomework 7\n\n\n8\n10/7 - 10/11\nHomework 8\n\n\n9\n10/14 - 10/18\nHomework 9\n\n\n10\n10/21 - 10/25\nHomework 10\n\n\n11\n10/28 - 10/31\nHomework 11\n\n\n12\n11/4 - 11/8\nHomework 12\n\n\n13\n11/12 - 11/15\nHomework 13\n\n\n14\n11/18 - 11/22\nHomework 14\n\n\n15\n11/25 - 11/26\nHomework 15"
+  }
+]
