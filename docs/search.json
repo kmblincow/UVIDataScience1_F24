@@ -9,12 +9,12 @@
   {
     "objectID": "Week3HW.html",
     "href": "Week3HW.html",
-    "title": "Week3HW",
+    "title": "Week 3 Homework",
     "section": "",
     "text": "Coming soon :)",
     "crumbs": [
       "Home",
-      "Week3HW"
+      "Week 3 Homework"
     ]
   },
   {
@@ -138,5 +138,16 @@
     "title": "Part I",
     "section": "A Cancer Modeling Example",
     "text": "A Cancer Modeling Example\nExercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.\nPlease run the code provided to replicate some of the analyses. Make sure you can explain what all the analysis steps do and that you understand all the results.\nIn addition, there are some extra tasks (Task 1), where no R code is provided. Please do these tasks when you have time available at the end of the lab.\n\nLoad the data\nRead the data, and convert to matrix format.\n\nmrna &lt;- read.table(\"data/data_example.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmrna &lt;- as.matrix(mrna)\n\nPrint the data\n\nmrna[1:4, 1:4]\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nVisualise the overall distribution of expression levels by histogram\n\nhist(mrna, nclass=40, xlim=c(-5,5), col=\"lightblue\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask 1\n\n\n\nThis is a callout-note, and it can be quite useful for exercises. You can find more about callout here.\nExample: Extend the above analysis to cover all genes."
+  },
+  {
+    "objectID": "Week2HW.html",
+    "href": "Week2HW.html",
+    "title": "Week 2 Homework",
+    "section": "",
+    "text": "Coming Soon :)",
+    "crumbs": [
+      "Home",
+      "Week 2 Homework"
+    ]
   }
 ]
