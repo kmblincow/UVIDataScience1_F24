@@ -101,8 +101,8 @@
     "text": "Resources\nLecture notes (insert link)\nLab notes (insert link)"
   },
   {
-    "objectID": "Week3HW.html",
-    "href": "Week3HW.html",
+    "objectID": "Week4HW.html",
+    "href": "Week4HW.html",
     "title": "Week 3 Homework",
     "section": "",
     "text": "Coming soon :)",
@@ -110,6 +110,13 @@
       "Home",
       "Week 3 Homework"
     ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Course Description\nDATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\nPrerequisites: MAT 140 or MAT 143.\n\nContact\nKayla Blincow: kayla.israel@uvi.edu"
   },
   {
     "objectID": "part_2_eda.html",
@@ -126,11 +133,15 @@
     "text": "A Cancer Modeling Example\nExercise on analysis of miRNA, mRNA and protein data from the paper Aure et al, Integrated analysis reveals microRNA networks coordinately expressed with key proteins in breast cancer, Genome Medicine, 2015.\nPlease run the code provided to replicate some of the analyses. Make sure you can explain what all the analysis steps do and that you understand all the results.\nIn addition, there are some extra tasks (Task 1), where no R code is provided. Please do these tasks when you have time available at the end of the lab.\n\nLoad the data\nRead the data, and convert to matrix format.\n\nmrna &lt;- read.table(\"data/data_example.txt\", header=T, sep=\"\\t\", dec=\".\")\n\n# Convert to matrix format\n\nmrna &lt;- as.matrix(mrna)\n\nPrint the data\n\nmrna[1:4, 1:4]\n\n      OSL2R.3002T4 OSL2R.3005T1 OSL2R.3013T1 OSL2R.3030T2\nACACA      1.60034     -0.49087     -0.26553     -0.27857\nANXA1     -2.42501     -0.05416     -0.46478     -2.18393\nAR         0.39615     -0.43348     -0.10232      0.58299\nBAK1       0.78627      0.39897      0.22598     -1.31202\n\n\nVisualise the overall distribution of expression levels by histogram\n\nhist(mrna, nclass=40, xlim=c(-5,5), col=\"lightblue\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTask 1\n\n\n\nThis is a callout-note, and it can be quite useful for exercises. You can find more about callout here.\nExample: Extend the above analysis to cover all genes."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "Week3HW.html",
+    "href": "Week3HW.html",
+    "title": "Week 3 Homework",
     "section": "",
-    "text": "Course Description\nDATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\nPrerequisites: MAT 140 or MAT 143.\n\nContact\nKayla Blincow: kayla.israel@uvi.edu"
+    "text": "Coming soon :)",
+    "crumbs": [
+      "Home",
+      "Week 3 Homework"
+    ]
   },
   {
     "objectID": "Week2HW.html",
