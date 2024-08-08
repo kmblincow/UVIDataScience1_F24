@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -390,7 +356,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"out-width":"700px","label":"unnamed-chunk-1","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"#load the data\nlakers <- lubridate::lakers #this code works because \"lakers\" is a pre-loaded dataset in the R package lubridate\n"},{"id":2,"options":{"out-width":"700px","label":"unnamed-chunk-2","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT"},{"id":3,"options":{"out-width":"700px","label":"unnamed-chunk-3","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"lakersQ2 <- lakers %>% \n  filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE\n\n#check that worked\nunique([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE"},{"id":4,"options":{"out-width":"700px","label":"unnamed-chunk-4","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"lakersQ2 <- lakersQ2 %>% #use the object you just created and overwrite it\n  filter(period != 5) %>% #remove overtime\n  group_by(date, opponent, period) %>% #group observations based on the date, opponent, and quarter\n  summarize(score = sum(points)) #based on the grouping find the sum of all points scored\n\nhead(lakersQ2)"},{"id":5,"options":{"out-width":"700px","label":"unnamed-chunk-5","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"ggplot(lakersQ2, aes(x = as.factor(period), y = score, \n                     fill = as.factor(period), color = as.factor(period))) +\n  geom_jitter(width = 0.25) +\n  geom_boxplot(alpha = 0.5) +\n  theme_bw() +\n  labs(x = \"Quarter\", y = \"Points Scored\")"},{"id":6,"options":{"out-width":"700px","label":"unnamed-chunk-6","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT"},{"id":7,"options":{"out-width":"700px","label":"unnamed-chunk-7","editor-font-scale":"1","editor-word-wrap":"true","context":"interactive","warning":"true","classes":"","message":"true","fig-cap":"","dpi":72,"read-only":"false","autorun":"false","fig-height":5,"output":"true","out-height":"","comment":"","editor-max-height":"","fig-width":7,"editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT"}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"#create an object \"lakers\" that includes our data set\nlakers <- lubridate::lakers ","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-1","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":2,"code":"#the glimpse function allows us to take a quick look at the data/data structure\nglimpse(lakers)","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-2","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":3,"code":"#the head function prints the first six rows of the data\nhead(lakers)","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-3","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":4,"code":"#we can look at the unique values for specific columns using the unique function and the $ operator\nunique(lakers$etype) #the type of plays recorded","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-4","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":5,"code":"#filter the data so we only have plays made by the Lakers\nlakersQ1 <- lakers %>%  \n  filter(team == \"LAL\") \n\n#check to see if that worked\nunique(lakersQ1$team) #should only print \"LAL\"","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-5","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":6,"code":"#only pull data related to turnovers\nlakersQ1 <- lakersQ1 %>% \n  filter(etype == \"turnover\") \n\n#take a look at the first 6 rows to see if we only have turnovers\nhead(lakersQ1)","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-6","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":7,"code":"ggplot(lakersQ1, aes(x = player)) + #create a plot with player as the x axis\n  geom_bar() + #plot a bar plot\n  theme_bw() + #add a theme\n  labs(x = \"Player\", y = \"Turnover Count\") + #change the axis labels\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) #adjust the x axis labels so we can read the player names","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-7","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":8,"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-8","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":9,"code":"#filter so we only have observations of Laker plays\nlakersQ2 <- lakers %>% \n  filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE\n\n#check that worked\nunique([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-9","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":10,"code":"#filter so we only have observations of free throws\nlakersQ2 <- lakersQ2 %>% #use the object you just created and overwrite it\n  filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE\n\n#take a look at your new data\nhead(lakersQ2)","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-10","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":11,"code":"#filter so we only have observations of MISSED free throws\nlakersQ2 <- lakersQ2 %>% #use the object you just created and overwrite it\n  filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE\n\n#take a look at your new data\nhead(lakersQ2)","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-11","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":12,"code":"#TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION\nggplot(lakersQ2, aes(x = player)) + #create a ggplot with the lakersQ2 data with player as the x axis\n  geom_bar() + #plot a bar plot\n  theme_bw() + #add a theme\n  labs(x = \"Player\", y = \"Missed Free Throw Count\") + #change the x and y axis labels\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) #adjust the x axis labels so we can read the player names","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-12","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":13,"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-13","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":14,"code":"#filter so we only have games against the Cavs or Celtics\nlakersQ3 <- lakers %>% \n  filter(opponent == \"CLE\" | opponent == \"BOS\") ","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-14","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":15,"code":"#filter so we only have plays made by the Lakers\nlakersQ3 <- lakersQ3 %>% \n  filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE\n\n#type code that will let you see if you were successful","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-15","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":16,"code":"#WRITE/RUN THE FULL CODE HERE TO FILTER FOR ONLY SHOTS IN THE ETYPE COLUMN\nlakersQ3_shots <- ","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-16","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":17,"code":"#TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION\nggplot(lakersQ3_shots, aes(x = player)) +\n  geom_bar() + #plot a bar plot\n  theme_bw() + #add a theme\n  labs(x = \"Player\", y = \"Shot Count\") + #change the x and y axis labels\n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) #adjust the x axis labels so we can read the player names","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-17","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":18,"code":"#WRITE/RUN THE FULL CODE HERE TO FILTER FOR ONLY REBOUNDS IN THE ETYPE COLUMN","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-18","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":19,"code":"#TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION \nggplot(lakersQ3_rbs, aes(x = player)) + \n  geom_bar() + #plot a bar plot   \n  theme_bw() + #add a theme   \n  labs(x = \"Player\", y = \"Shot Count\") + #change the x and y axis labels   \n  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) #adjust the x axis labels so we can read the player names ","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-19","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":20,"code":"#WRITE/RUN THE FULL CODE HERE TO FILTER FOR ONLY ASSISTS IN THE ETYPE COLUMN\n#OR EXPLAIN WHY YOU CAN'T DO THAT AND SCREENSHOT...","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-20","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":21,"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-21","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}},{"id":22,"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","options":{"autorun":"false","dpi":72,"editor-quick-suggestions":"false","out-width":"700px","editor-max-height":"","context":"interactive","label":"unnamed-chunk-22","fig-height":5,"comment":"","fig-width":7,"classes":"","message":"true","output":"true","fig-cap":"","warning":"true","results":"markup","read-only":"false","editor-font-scale":"1","editor-word-wrap":"true","out-height":""}}];
 
 </script>
 <script type="module">
@@ -1644,7 +1610,7 @@ globalThis.qwebrExecuteCode = async function (
   <ul class="collapse">
   <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li><a href="#question-1-who-committed-the-most-turnovers" id="toc-question-1-who-committed-the-most-turnovers" class="nav-link" data-scroll-target="#question-1-who-committed-the-most-turnovers">Question 1: Who committed the most turnovers?</a></li>
-  <li><a href="#question-2-who-contributed-to-low-scoring-quarters" id="toc-question-2-who-contributed-to-low-scoring-quarters" class="nav-link" data-scroll-target="#question-2-who-contributed-to-low-scoring-quarters">Question 2: Who contributed to low scoring quarters?</a></li>
+  <li><a href="#question-2-which-players-missed-the-most-free-throws" id="toc-question-2-which-players-missed-the-most-free-throws" class="nav-link" data-scroll-target="#question-2-which-players-missed-the-most-free-throws">Question 2: Which players missed the most free throws?</a></li>
   <li><a href="#question-3-who-performed-highest-against-the-best-opposing-teams" id="toc-question-3-who-performed-highest-against-the-best-opposing-teams" class="nav-link" data-scroll-target="#question-3-who-performed-highest-against-the-best-opposing-teams">Question 3: Who performed highest against the best opposing teams?</a></li>
   <li><a href="#concluding-remarks" id="toc-concluding-remarks" class="nav-link" data-scroll-target="#concluding-remarks">Concluding remarks</a></li>
   </ul></li>
@@ -1957,21 +1923,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-</div>
-<p>To receive full points on this homework, please submit a document containing all of the requested screenshots on Brightspace.</p>
+<p><em>To receive full points on this homework, please submit a document containing all of the requested screenshots on Brightspace. You should also make sure to run all the code chunks in this document for the tutorial to run properly.</em></p>
 <section id="scenario-you-are-a-data-scientist-for-the-la-lakers" class="level1">
 <h1>Scenario: You are a data scientist for the LA Lakers!</h1>
 <div class="quarto-figure quarto-figure-center">
@@ -1980,76 +1932,39 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 <figcaption>2009 NBA Champion LA Lakers</figcaption>
 </figure>
 </div>
-<p>For this week’s coding exercise we are going to pretend that you are a data scientist working for the Los Angeles Lakers during the 2009 off-season. You are coming out of a championship win last season and team manager, Mitch Kupchak, and coach, Phil Jackson, now need to decide what changes to make to the roster to set themselves up for success next season. They come to you asking you to do an analysis using data from last season to help them make these tough decisions. In this case, instead of having a question and finding data to address that question, we are given a dataset and are then tasked with asking what questions can we ask with these data?</p>
+<p>For this week’s coding exercise we are going to pretend that you are a data scientist working for the Los Angeles Lakers during the 2009 off-season. You are coming out of a championship win last season and team manager, Mitch Kupchak, and coach, Phil Jackson, are looking for insights into how they can win another one next season. They come to you asking to do an analysis using data from last season to help them figure out where they should focus their efforts to improve the team. In this case, instead of having a question and finding data to address that question, we are given a data set and are then tasked with asking what questions can we ask with these data?</p>
 <p>For the sake of this tutorial, I am going to tell you that the questions we are going to ask are as follows:</p>
 <ol type="1">
 <li><p>Which players committed the most turnovers?</p></li>
-<li><p>Across the full season, which quarter did the Lakers seem to struggle most in terms of points scored at home versus away games? Which players missed the most shots in that quarter in home versus away games?</p></li>
-<li><p>Last season, the Boston Celtics and the Cleveland Cavaliers had higher W/L percentages than the Lakers. Which players performed the best against these teams in terms of points? Assists? Rebounds?</p></li>
+<li><p>Which players missed the most free throws?</p></li>
+<li><p>Last season, the Boston Celtics and the Cleveland Cavaliers won more games during regular season than the Lakers. Which Lakers players performed the best against these teams in terms of attempted shots? Rebounds? Assists?</p></li>
 </ol>
 <section id="getting-started" class="level2">
 <h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>First things first, we load our data set and take a look at it. I am only going to show you some of the ways you can explore this dataset, then provide you with a written summary. In reality, you would spend a lot of time taking a look at each column and familiarizing yourself with what the data entail.</p>
-<p>MAKE SURE TO RUN THE CODE CHUNK BELOW!</p>
+<p>First things first, we load our data set and take a look at it. I am only going to show you some of the ways you can explore this data set, then provide you with a written summary. In reality, you would spend a lot of time taking a look at each column and familiarizing yourself with what the data entail.</p>
+<p>MAKE SURE TO RUN ALL CODE CHUNKS.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#the glimpse function allows us to take a quick look at the data/data structure</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lakers) <span class="co">#all columns are character strings &lt;chr&gt; or integers &lt;int&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 34,624
-Columns: 13
-$ date      &lt;int&gt; 20081028, 20081028, 20081028, 20081028, 20081028, 20081028, …
-$ opponent  &lt;chr&gt; "POR", "POR", "POR", "POR", "POR", "POR", "POR", "POR", "POR…
-$ game_type &lt;chr&gt; "home", "home", "home", "home", "home", "home", "home", "hom…
-$ time      &lt;chr&gt; "12:00", "11:39", "11:37", "11:25", "11:23", "11:22", "11:22…
-$ period    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …
-$ etype     &lt;chr&gt; "jump ball", "shot", "rebound", "shot", "rebound", "shot", "…
-$ team      &lt;chr&gt; "OFF", "LAL", "LAL", "LAL", "LAL", "LAL", "POR", "LAL", "LAL…
-$ player    &lt;chr&gt; "", "Pau Gasol", "Vladimir Radmanovic", "Derek Fisher", "Pau…
-$ result    &lt;chr&gt; "", "missed", "", "missed", "", "made", "", "made", "", "mad…
-$ points    &lt;int&gt; 0, 0, 0, 0, 0, 2, 0, 1, 0, 2, 2, 0, 0, 2, 2, 0, 0, 2, 0, 0, …
-$ type      &lt;chr&gt; "", "hook", "off", "layup", "off", "hook", "shooting", "", "…
-$ x         &lt;int&gt; NA, 23, NA, 25, NA, 25, NA, NA, NA, 36, 30, 34, NA, 15, 46, …
-$ y         &lt;int&gt; NA, 13, NA, 6, NA, 10, NA, NA, NA, 21, 21, 10, NA, 17, 9, 10…</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#the head function prints the first six rows of the data</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lakers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      date opponent game_type  time period     etype team              player
-1 20081028      POR      home 12:00      1 jump ball  OFF                    
-2 20081028      POR      home 11:39      1      shot  LAL           Pau Gasol
-3 20081028      POR      home 11:37      1   rebound  LAL Vladimir Radmanovic
-4 20081028      POR      home 11:25      1      shot  LAL        Derek Fisher
-5 20081028      POR      home 11:23      1   rebound  LAL           Pau Gasol
-6 20081028      POR      home 11:22      1      shot  LAL           Pau Gasol
-  result points  type  x  y
-1             0       NA NA
-2 missed      0  hook 23 13
-3             0   off NA NA
-4 missed      0 layup 25  6
-5             0   off NA NA
-6   made      2  hook 25 10</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#we can look at the unique values for specific columns using the unique function and the $ operator</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(lakers<span class="sc">$</span>etype) <span class="co">#the type of plays recorded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> [1] "jump ball"  "shot"       "rebound"    "foul"       "free throw"
- [6] "turnover"   "timeout"    "sub"        "violation"  "ejection"  </code></pre>
-</div>
-</div>
-<p>NOTE: the “$” operator allows us to select a column within a dataframe. In the above code chunk, we used the unique() function on the etype column by typing lakers$etype, which basically says look in the lakers dataframe for the etype column.</p>
-<p>We see that our data includes game logs from the entire season with the following variables:</p>
+<p>NOTE: the lubridate package (an R add-on) has this data set pre-loaded in it, which is why the above code works. We are using the assignment arrow “&lt;-” to create an object “lakers” that is the lubridate lakers data set.</p>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>NOTE: It’s a good idea to make note of what form the data takes in each column. In this case, all columns are character strings <chr> or integers <int>. This is important because we might not want them to take that form. For example, the “date” column is currently an integer, but if we were to work with it, we might want it to be recognized as an actual date. We will spend more time working on dealing with issues like this later in the semester.</int></chr></p>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>NOTE: the “$” operator allows us to select a column within a dataframe. In the above code chunk, we used the unique() function on the etype column by typing lakers$etype. The line of code says look in the lakers dataframe for the etype column and give us a list of the unique values present in that column.</p>
+<p>We see that our data includes game logs from the entire season with the following variables (variables we will be actively using in this tutorial are bolded):</p>
 <ul>
 <li><p>date: Date of the game</p></li>
-<li><p>opponent: Three letter code for the opponent team the Lakers played against</p></li>
+<li><p><strong>opponent: Three letter code for the opponent team the Lakers played against</strong></p></li>
 <li><p>game_type: Whether the game was home or away</p></li>
 <li><p>time: The time on the game clock when the play was recorded (i.e.&nbsp;time left in the quarter)</p></li>
 <li><p>period: Quarter of the game (1, 2, 3, 4, 5), with 5 representing overtime</p></li>
-<li><p>etype: Type of play recorded</p></li>
-<li><p>team: The team that made the play</p></li>
-<li><p>player: The player that made the play</p></li>
-<li><p>result: The result of the play - blank for non-shots, “missed” or “made” for shots</p></li>
+<li><p><strong>etype: Type of play recorded</strong></p></li>
+<li><p><strong>team: The team that made the play</strong></p></li>
+<li><p><strong>player: The player that made the play</strong></p></li>
+<li><p><strong>result: The result of the play - blank for non-shots, “missed” or “made” for shots</strong></p></li>
 <li><p>points: Number of points the play resulted in</p></li>
 <li><p>type: Type of play - type of foul for fouls, type of shot for shots, type of rebound for rebounds</p></li>
 <li><p>x: The location along the x plane (court width) of the play (shots only)</p></li>
@@ -2063,99 +1978,98 @@ $ y         &lt;int&gt; NA, 13, NA, 6, NA, 10, NA, NA, NA, 21, 21, 10, NA, 17, 9
 <li>Which players committed the most turnovers?</li>
 </ul>
 <p>To answer this, we first need to do some data filtering. We are only interested in plays made by the Lakers, so we need to filter the data to only include “LAL” observations in the “team” column.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#filter the data so we only have plays made by the Lakers</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>lakersQ1 <span class="ot">&lt;-</span> lakers <span class="sc">%&gt;%</span>  <span class="co">#that weird symbol is called a pipe, you can imagine it means "and then"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(team <span class="sc">==</span> <span class="st">"LAL"</span>) <span class="co">#NOTE: this is the dplyr package filter, not the base R filter</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#check to see if that worked</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(lakersQ1<span class="sc">$</span>team) <span class="co">#should only print "LAL"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "LAL"</code></pre>
-</div>
-</div>
-<p>In the above code chunk I introduced a new coding operator, the pipe, denoted by “%&gt;%” or “|&gt;”. You can imagine this translating to “and then”. We are creating a new object called lakersQ1. To create this object we take the lakers data “and then” we filter it so that the “team” column only includes “LAL”. We use == when filtering character strings, and = when filtering numeric or integer values.</p>
-<p>Now that we have done that, we need to determine which players committed the most turnovers. We can again accomplish this using filtering.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#only pull data related to turnovers</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>lakersQ1 <span class="ot">&lt;-</span> lakersQ1 <span class="sc">%&gt;%</span> <span class="co">#NOTE: we are overwriting our original lakersQ1 object when we assign this code to an object of the same name</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(etype <span class="sc">==</span> <span class="st">"turnover"</span>) </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#take a look at the first 6 rows to see what it says</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lakersQ1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      date opponent game_type  time period    etype team              player
-1 20081028      POR      home 08:15      1 turnover  LAL         Kobe Bryant
-2 20081028      POR      home 03:21      1 turnover  LAL Vladimir Radmanovic
-3 20081028      POR      home 02:52      1 turnover  LAL          Lamar Odom
-4 20081028      POR      home 01:12      1 turnover  LAL       Jordan Farmar
-5 20081028      POR      home 06:50      2 turnover  LAL         Kobe Bryant
-6 20081028      POR      home 02:35      2 turnover  LAL        Derek Fisher
-  result points type  x  y
-1             0      NA NA
-2             0      NA NA
-3             0      NA NA
-4             0      NA NA
-5             0      NA NA
-6             0      NA NA</code></pre>
-</div>
-</div>
-<p>In the above code chunk, we used the pipe filter for only observations of turnovers.</p>
-<p>Now we can create a visualization to see who committed the most turnovers.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lakersQ1, <span class="fu">aes</span>(<span class="at">x =</span> player)) <span class="sc">+</span> <span class="co">#create a ggplot with the lakersQ1 data with player as the x axis</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co">#plot a bar plot</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span> <span class="co">#add a theme</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Player"</span>, <span class="at">y =</span> <span class="st">"Turnover Count"</span>) <span class="sc">+</span> <span class="co">#change the x and y axis labels</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="co">#adjust the x axis labels so we can read the player names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week2HW_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
+<div id="qwebr-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>In the above code chunk, I introduced a new coding operator, the pipe, denoted by “%&gt;%” or “|&gt;”. You can imagine this translating to “and then”. We are creating a new object called lakersQ1. To create this object we take the lakers data “and then” we filter it so that the “team” column only includes “LAL”. We use == when filtering (not =). NOTE: we are using the dplyr package filter() function, not the base R filter() function.</p>
+<p>Now that we have done that, we need to determine which players committed the most turnovers by keeping only observations associated with turnovers. We can again accomplish this using filtering.</p>
+<div id="qwebr-insertion-location-6"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>NOTE: when we use the assignment arrow (&lt;-) with the same object name as the one we made previously (“lakersQ1”), we are overwriting our original lakersQ1 object and creating a new one.</p>
+<p>Now we can create a visualization to see who committed the most turnovers. Again, we will be spending a lot more time working through how to make visualizations, so don’t worry too much about the code. Focus more on interpreting the output.</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We see that Kobe Bryant, Pau Gasol, and Lamar Odom committed the most turnovers across the season. Assuming you know nothing about basketball, I will tell you that these are three of the biggest stars on this championship team. This means they probably got waayyyy more playing time than the other players, giving them more opportunity to commit a turnover in the first place. This is an important lesson for multiple reasons:</p>
 <ol type="1">
-<li><p>You should always evaluate your results to see if they make sense in the context of the bigger picture. Kobe Bryant is one of the greatest NBA players of all time and played with the Lakers his entire 20 year career–he obviously would never get traded.</p></li>
-<li><p>Sometimes folks you are working with think they want the answer to one question (who committed the most turnovers?), but what they really want is the answer to a different question.</p></li>
+<li><p>You should always evaluate your results to see if they make sense in the context of the bigger picture. Kobe Bryant is one of the greatest NBA players of all time and played with the Lakers his entire 20 year career. If we were using this as a metric for deciding who gets traded, we probably haven’t found a very good metric. But then again, even Kobe has room for improvement… 200 seems like a lot, and he could use this information to focus his efforts on reducing turnovers.</p></li>
+<li><p>Sometimes folks you are working with think they want the answer to one question (who committed the most turnovers?), but what they really want is the answer to a different question (who committed the most turnovers accounting for how often they played?).</p></li>
 </ol>
-<p>What’s something we could do to make this a fairer picture of turnover rates ?</p>
-<div id="qwebr-insertion-location-2"></div>
+<p><em>What’s something we could do to make this a fairer picture of turnover rates?</em></p>
+<div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="question-2-who-contributed-to-low-scoring-quarters" class="level2">
-<h2 class="anchored" data-anchor-id="question-2-who-contributed-to-low-scoring-quarters">Question 2: Who contributed to low scoring quarters?</h2>
+<section id="question-2-which-players-missed-the-most-free-throws" class="level2">
+<h2 class="anchored" data-anchor-id="question-2-which-players-missed-the-most-free-throws">Question 2: Which players missed the most free throws?</h2>
 <p>Let’s move on to the second question.</p>
 <ul>
-<li>Across the full season, which quarter did the Lakers seem to struggle most in terms of points scored at home versus away games? Which players missed the most shots in that quarter in home versus away games?</li>
+<li>Which players missed the most free throws?</li>
 </ul>
-<p>First thing we have to do is identify which quarter was the lowest scoring across the season. We will do this by again filtering so that we only have rows including information on plays by the Lakers.</p>
-<p>Adjust the following code chunk so that you create an object called “lakersQ2” that filters for only plays made by the Lakers. If you get this right, the next two code chunks should run smoothly. (HINT: Look back at how we tackled this task in the first question.)</p>
-<div id="qwebr-insertion-location-3"></div>
+<p>First thing we have to do is again pull only data related to observations of plays commited by the Lakers (not their opponents).</p>
+<p>Adjust the following code chunk so that you create an object called “lakersQ2” that filters for only plays made by the Lakers. (HINT: Look back at how we tackled this task in the first question.)</p>
+<div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Now we are going to calculate the number of points scored each quarter each game, excluding overtime. I’ll write this code for you, just run the following chunk.</p>
-<div id="qwebr-insertion-location-4"></div>
+<p>Now we need to filter so we only have data associated with free throws.</p>
+<p>Adjust the following code to accomplish that task. (HINT: Look at how we filtered to only have observations of turnovers in the first question.)</p>
+<div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In the above code chunk, I introduce a new, very important combination of functions: group_by() and summarize(). This allows us to group data based on one or more columns, basically creating a category, that we can then calculate summary statistics for. In this case we are identifying indivdual games by grouping by date and opponent and then also grouping by period, to create a unique category for each quarter in each game. We then use summarize() and the sum() functions to calculate the total number of points scored in each quarter in each game. You’ll notice our dataframe is greatly simplified now, only including our grouping columns and the new column, “score”, that we created.</p>
-<p>I will now generate a boxplot summarizing these data. Again, just run this chunk.</p>
-<div id="qwebr-insertion-location-5"></div>
+<p>Finally, we also need to filter so we are only looking at <em>missed</em> free throws.</p>
+<p>Adjust the code chunk below to do the final filtering so we are looking at data on free throws missed by the Lakers.</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Assuming you completed the three code chunks above correctly, this following code chunk should generate a bar plot of the number of missed free throws for each player.</p>
+<p><em>Take a screenshot of the result plot and include it in your homework response.</em></p>
+<div id="qwebr-insertion-location-12"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><em>Which players missed the most free throws?</em> <em>Is there anything you would change about this question/analysis to get a fairer picture of free throw percentages?</em></p>
+<div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="question-3-who-performed-highest-against-the-best-opposing-teams" class="level2">
 <h2 class="anchored" data-anchor-id="question-3-who-performed-highest-against-the-best-opposing-teams">Question 3: Who performed highest against the best opposing teams?</h2>
+<p>Moving on to our final question!</p>
+<ul>
+<li>Last season, the Boston Celtics and the Cleveland Cavaliers had higher W/L percentages than the Lakers. Which players performed the best against these teams in terms of attempted shots? Rebounds? Assists?</li>
+</ul>
+<p>We will again rely on filtering to find the answer.</p>
+<p>First, let’s filter so the data only include games played against the Celtics and the Cavs. I’ll do this one for you, just make sure to run the code chunk below.</p>
+<div id="qwebr-insertion-location-14"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>In the above chunk, I used the “|” operator. When filtering, this symbol, |, means “or”. In the second line of code we are saying we only want observations where the opponent column is “CLE” (for the Cavs) OR “BOS” (for the Celtics). We will learn more about these types of operators later in the semester.</p>
+<p>Now that we have only the games we are interested in, let’s filter so we only have observations of plays made by the Lakers. <em>Fill out the code chunk below to accomplish that task.</em></p>
+<div id="qwebr-insertion-location-15"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Let’s start with who had the most attempted shots?</p>
+<p><em>Use the code chunk below to filter for shots in the etype column. Call the new object lakersQ3_shots.</em></p>
+<div id="qwebr-insertion-location-16"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Assuming you completed the code chunk above correctly, the following chunk should generate a plot telling you who took the most shots against the Celtics and Cavs last season.</p>
+<p><em>Take a screenshot of the plot below and include it in your HW response.</em></p>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Now let’s do the same thing to see who had the most rebounds.</p>
+<p><em>Use the code chunk below to filter for rebounds in the etype column from the lakersQ3 object. Call the new object lakersQ3_rbs</em></p>
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Assuming you completed the code chunk above correctly, the following chunk should generate a plot telling you who got the most rebounds against the Celtics and Cavs last season.</p>
+<p><em>Take a screenshot of the plot below and include it in your HW response.</em></p>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Now, can we accomplish the same task for assists?</p>
+<p><em>Use the code chunk below to filter for assists in the etype column.</em></p>
+<p>(HINT: you might want to take a look at the available options in the etype column using the unique() function, similar to what we did in the “Getting started” section.</p>
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="concluding-remarks" class="level2">
 <h2 class="anchored" data-anchor-id="concluding-remarks">Concluding remarks</h2>
-<p>Obviously this is a very simplified example, but these types of analyses actually go on behind the scenes for most sports teams. Based on our very limited analysis who would you say the Lakers should trade? Who should they keep? Why?</p>
-<div id="qwebr-insertion-location-6"></div>
+<p>Obviously, I intentionally made this is a very simplified example, as we are just starting to get our feet wet in terms of coding in R, but these types of analyses actually go on behind the scenes for most sports teams.</p>
+<p><em>Based on our very limited analysis what would your recommendations be to the Lakers coach and manager regarding what to focus on for next season?</em></p>
+<div id="qwebr-insertion-location-21"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>There are much more complicated questions we could ask and analyses we could perform with these data as well. We stuck with questions directly related to the variables present, but we can also take these data another step using data manipulation and analysis tools. Even though the active court lineup is not provided, we could deduce which players were on the court at certain times and ask something like which lineup led to the most points scored? Or which lineup led to the most missed shots by the other team? We could also try predicting outcomes using these data. What is the probability of the Lakers winning a game given the number of minutes Kobe Bryant plays in the first half? How well can we predict whether the Lakers win or not based on the starting lineup, number of points in the first quarter, and number of shots given up to the other team?</p>
-<p>What is another more complex question you could answer using these data?</p>
-<div id="qwebr-insertion-location-7"></div>
+<p>There are much more complicated questions we could ask and analyses we could perform with these data as well. We stuck with questions directly related to the variables present, but we can also take these data another step using data manipulation and analysis tools. Even though the active court lineup is not provided, we could deduce which players were on the court at certain times and ask something like which lineup led to the most points scored? Or which lineup led to the most missed shots by the other team? We could also try predicting outcomes using these data. What is the probability of the Lakers winning a game given the number of minutes Kobe Bryant plays in the first half? How about given the number of consecutive away games they’ve played?</p>
+<p><em>What is another more complex question you could answer using these data?</em></p>
+<div id="qwebr-insertion-location-22"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>As we move through this semester, we will try to build your skills so that you can start trying to address these types of more complex data science questions.</p>
+<p>As we move through this semester, we will try to build your coding skills so that you can start trying to address these types of more complex data science questions on your own. We might even revisit this data set later in the semester to see if we can implement the tools you’ve learned to ask more complex questions.</p>
 
 
 </section>
