@@ -193,7 +193,7 @@ head(lakersQ2)
 
 Assuming you completed the three code chunks above correctly, this following code chunk should generate a bar plot of the number of missed free throws for each player.
 
-*Take a screenshot of the result plot and include it in your homework response.*
+*Take a screenshot of the resulting plot and include it in your homework response.*
 
 ```{webr-r}
 #TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION
@@ -251,7 +251,7 @@ lakersQ3_shots <-
 
 Assuming you completed the code chunk above correctly, the following chunk should generate a plot telling you who took the most shots against the Celtics and Cavs last season.
 
-*Take a screenshot of the plot below and include it in your HW response.*
+*Take a screenshot of the resulting plot and include it in your HW response.*
 
 ```{webr-r}
 #TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION
@@ -265,7 +265,7 @@ ggplot(lakersQ3_shots, aes(x = player)) +
 
 Now let's do the same thing to see who had the most rebounds.
 
-*Use the code chunk below to filter for rebounds in the etype column from the lakersQ3 object. Call the new object lakersQ3_rbs*
+*Use the code chunk below to filter for rebounds in the etype column from the lakersQ3 object. Call the new object lakersQ3_rbs.*
 
 ```{webr-r}
 #WRITE/RUN THE FULL CODE HERE TO FILTER FOR ONLY REBOUNDS IN THE ETYPE COLUMN
@@ -273,7 +273,7 @@ Now let's do the same thing to see who had the most rebounds.
 
 Assuming you completed the code chunk above correctly, the following chunk should generate a plot telling you who got the most rebounds against the Celtics and Cavs last season.
 
-*Take a screenshot of the plot below and include it in your HW response.*
+*Take a screenshot of the resulting plot and include it in your HW response.*
 
 ```{webr-r}
 #TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION 
