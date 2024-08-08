@@ -105,8 +105,7 @@ Try the exercises from the text below. When you have completed them share a scre
     libary(todyverse)
 
     ggplot(dTA = mpg) + 
-      geom_point(maping = aes(x = displ y = hwy)) +
-      geom_smooth(method = "lm)
+      geom_point(maping = aes(x = displ y = hwy)) 
     ```
 
 3.  *We will skip this one since it's specific to RStudio.*
