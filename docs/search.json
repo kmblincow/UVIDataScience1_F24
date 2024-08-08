@@ -22,66 +22,42 @@
     "href": "Week1R4DS.html",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.\nFor this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.\nA couple vocabulary words:\n\ncode chunk: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run\nWebR code chunk: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section\n\n\n\nThese are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCan you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry the exercises from the text below. When you have completed them share a screenshot of your outputs for each questions to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.\nFor this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.\nA couple vocabulary words:\n\ncode chunk: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run\nWebR code chunk: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section\n\n\n\nThese are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCan you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Week1R4DS.html#coding-basics",
     "href": "Week1R4DS.html#coding-basics",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "These are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "These are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Week1R4DS.html#comments",
     "href": "Week1R4DS.html#comments",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "Try adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "Try adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Week1R4DS.html#whats-in-a-name",
     "href": "Week1R4DS.html#whats-in-a-name",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "Can you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "Can you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Week1R4DS.html#calling-functions",
     "href": "Week1R4DS.html#calling-functions",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "Try exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "Try exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "Week1R4DS.html#exercises",
     "href": "Week1R4DS.html#exercises",
     "title": "Week 1 Homework: R4DS Exercises",
     "section": "",
-    "text": "Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each questions to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
-    "crumbs": [
-      "Home",
-      "Week 1 Homework: R4DS Exercises"
-    ]
+    "text": "Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "part_1_prep.html",
