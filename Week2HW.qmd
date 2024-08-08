@@ -280,7 +280,7 @@ Assuming you completed the code chunk above correctly, the following chunk shoul
 ggplot(lakersQ3_rbs, aes(x = player)) + 
   geom_bar() + #plot a bar plot   
   theme_bw() + #add a theme   
-  labs(x = "Player", y = "Shot Count") + #change the x and y axis labels   
+  labs(x = "Player", y = "Rebound Count") + #change the x and y axis labels   
   theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)) #adjust the x axis labels so we can read the player names 
 ```
 
