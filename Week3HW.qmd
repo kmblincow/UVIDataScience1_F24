@@ -192,6 +192,8 @@ Create **three visualizations** addressing the following research questions:
 
 To receive full points for this exercise, you should provide a written answer to the each of research questions based on your visualizations. Screen shot the plot and the written answer and include it in your HW submission.
 
+*HINT: You might need to explore some other geom options.*
+
 *Research Question: Which island has the most Gentoo penguins?*
 
 ```{webr-r}
