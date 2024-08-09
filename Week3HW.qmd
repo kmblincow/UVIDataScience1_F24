@@ -9,7 +9,7 @@ filters:
 
 In this tutorial, we will introduce some reasons why data visualization is a critical aspect of data science and demonstrate the basics of creating effective data visualizations in R using ggplot2.
 
-The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is package with functions that allow us to make effective data visualizations.
+The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.
 
 ```{r setup, output = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -41,8 +41,8 @@ There are a number of different tools that can aid in visualizing data in the R 
 
 -   **ggplot2**: A powerful and flexible plotting package based on the grammar of graphics, allowing for the creation of complex multi-layered plots with consistent syntax.
 -   **base R**: The default plotting system in R, offering simple and straightforward functions for plotting with basic customization options. (I often use base R plots for quick exploratory visualizations).
--   **plotly**: An interactive graphing package that builds on ggplot2, allow users to create dynamic, web-based interactive visualizations. For example, you can have a plot display a written value when hovering over a data point.
--   **shiny**: A web application framework for R that allows users to create interactive web apps with reactive elements, including dynamic and responsive plots. This is a common tool for creating interactive data dashboards.
+-   **plotly**: An interactive graphing package that builds on ggplot2, allowing users to create dynamic, web-based interactive visualizations. For example, you can have a plot display a written value when hovering over a data point.
+-   **shiny**: A web application framework for R that allows users to create interactive web apps with reactive elements, including dynamic and responsive plots. This is a common tool for creating interactive data dashboards in R.
 
 You are encouraged to explore these tools and others, but for the purposes of this lab, we will be focusing on ggplot2. You can find additional information on the ggplot2 package [here](https://ggplot2.tidyverse.org/).
 
@@ -64,7 +64,7 @@ The Palmer Penguins dataset includes morphometric information on three different
 
 Run the code chunk below to load the data.
 
-*Add another line of code to the chunk that will output a list of all your columns, what types of variables exist in those columns, and a couple observations from each column.*
+*Add another line of code to the chunk that will output a list of all your columns, what types of variables exist in those columns, and a couple observations from each column. Screenshot your code and output for your HW submission.*
 
 ```{webr-r}
 #create an object called penguins containing our data
@@ -81,7 +81,7 @@ By visualizing the data we can find answers to these questions and more!
 
 ## Let's visualize some data!
 
-In this section we will demonstrate how to make a visualization using seaborn.
+In this section we will demonstrate how to make a visualization using ggplot2.
 
 For this first example, each line of code includes a comment (denoted by #) that describes what that line is doing. In general, it's good practice to go line by line in code you receive to ensure you fully understand what it's doing.
 
@@ -93,21 +93,24 @@ We are going to start by making a plot that will show us the relationship betwee
 
 ```{webr-r}
 #DEMONSTRATION (RUN THIS CHUNK TO SEE WHAT IS CREATED)
+
 #create our visualization using ggplot2
-ggplot(data = penguins, 
-       mapping = aes(x = flipper_length_mm, 
-                     y = body_mass_g,
-                     color = species)) +
-  geom_point()
+ggplot( #call the ggplot function to create a plot
+  data = penguins, #specify the object containing our data
+  mapping = #tell ggplot which parts of our data we want to use
+    aes(x = flipper_length_mm, #put flipper length on the x axis
+        y = body_mass_g, #put body mass on the y axis
+        color = species)) + #color elements by species
+  geom_point() #tell R we want to plot points (scatterplot)
 ```
 
 Does the resulting plot match what you expected the code to generate?
 
 *EXERCISE 1:*
 
-Adjust the code chunk below to create a plot that shows the relationship between bill length and flipper length by species. Screenshot your code and resulting plot for your homework submission.
+Adjust the code chunk below to create a plot that shows the relationship between bill length and body mass by species. Screenshot your code and resulting plot for your homework submission.
 
-*(HINT: you might want to refer back to your column names to ensure you are inputting the write variable names, and don't forget about commas!)*
+*(HINT: You might want to refer back to your column names to ensure you are inputting the write variable names, and don't forget about commas!)*
 
 ```{webr-r}
 #EXERCISE 1
@@ -130,26 +133,28 @@ Based on your plots, do you think flipper length or bill length is better at pre
 
 ## More ggplot2 use cases
 
-Run the code chunks in this section to see how visualizations can help us get answers to the listed research questions.
+Run the code chunks in this section to see how visualizations can help us get answers to research questions related to the penguins data set.
 
-*Research Question:* *What is the distribution of bill depth measurements?*
+***Research Question:*** ***What is the distribution of bill depth measurements?***
 
 We can use a histogram to plot distributions of numerical variables. Notice we only need to provide an x variable, as the histogram by default will plot the count of observations on the y axis.
 
 ```{webr-r}
-ggplot(data = penguins, mapping = aes(x = bill_length_mm)) +
+ggplot(data = penguins, 
+       mapping = aes(x = bill_length_mm)) +
   geom_histogram()
 ```
 
 We see a roughly bi-modal distribution of bill lengths across the entire data set, with peaks around 38-42 mm and 45-50 mm.
 
-*Research Question:* *How does the body mass of penguins differ across islands?*
+***Research Question:*** ***How does the body mass of penguins differ across islands?***
 
 We can use a box plot or violin plot to look for differences across categorical variables.
 
 ```{webr-r}
-ggplot(data = penguins, mapping = aes(x = island,
-                                      y = body_mass_g)) +
+ggplot(data = penguins, 
+       mapping = aes(x = island,
+                     y = body_mass_g)) +
   geom_boxplot()
 ```
 
@@ -162,27 +167,28 @@ ggplot(data = penguins, mapping = aes(x = island,
 Both of these plots show us that Biscoe Island has penguins with higher body mass on average.
 
 \
-*Research Question: Is the relative distribution of bill length and flipper length across species conserved across both variables?*
+***Research Question: Is the relative distribution of bill length and flipper length across species conserved across both variables?***
 
-We can layer multiple geoms to get more insight into our data, as seen below. Also, notice we are adding an argument for "color" in the aes() call to specify we want our geom elements to be colored based on species.
+We can layer multiple geoms to get more insight into our data, as seen below. Notice we are also adding an argument for "color" in the aes() to specify we want our geom elements to be colored based on species.
 
 ```{webr-r}
-ggplot(data = penguins, mapping = aes(x = bill_length_mm,
-                                      y = flipper_length_mm,
-                                      color = species)) + #add color element
+ggplot(data = penguins, 
+       mapping = aes(x = bill_length_mm,
+                     y = flipper_length_mm,
+                     color = species)) + #add color element
   geom_point() + #add points
   geom_rug() #add lines along x and y axes showing distribution of points
 ```
 
-What we see is that flipper length is consistently highest for Gentoo penguins, but the highest bill lengths are shared by Gentoo and Chinstrap penguins. Adelie penguins are consistently smallest for both morphometrics.
+We see that flipper length is consistently highest for Gentoo penguins, but the highest bill lengths are shared by Gentoo and Chinstrap penguins. Adelie penguins are consistently smallest for both morphometrics.
 
 ## FINAL EXERCISE: Your turn!
 
 Create **three visualizations** addressing the following research questions:
 
 1.  Which island has the most Gentoo penguins?
-2.  Do males have larger body mass on average than females for all species?
-3.  Is the relationship between bill length and bill depth the same for all species?
+2.  Do males have larger body mass on average than females?
+3.  Is the relative distribution of bill length and bill depth of species conserved across both variables?
 
 To receive full points for this exercise, you should provide a written answer to the each of research questions based on your visualizations. Screen shot the plot and the written answer and include it in your HW submission.
 
@@ -206,7 +212,7 @@ To receive full points for this exercise, you should provide a written answer to
 #WRITE YOUR ANSWER TO THE RESEARCH QUESTION 2 HERE AND SCREENSHOT
 ```
 
-*Research Question:* *Is the relationship between bill length and bill depth the same for all species?*
+*Research Question:* *Is the relative distribution of bill length and bill depth of species conserved across both variables?*
 
 ```{webr-r}
 #ENTER YOUR CODE FOR RESEARCH QUESTION 3 VISUALIZATION HERE
