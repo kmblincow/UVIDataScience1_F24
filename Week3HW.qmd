@@ -204,7 +204,7 @@ To receive full points for this exercise, you should provide a written answer to
 #WRITE YOUR ANSWER TO THE RESEARCH QUESTION 1 HERE AND SCREENSHOT
 ```
 
-*Research Question:* *Do males have larger body mass on average than females for all species?*
+*Research Question:* *Do males have larger body mass on average than females?*
 
 ```{webr-r}
 #ENTER YOUR CODE FOR RESEARCH QUESTION 2 VISUALIZATION HERE
