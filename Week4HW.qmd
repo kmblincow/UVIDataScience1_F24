@@ -15,23 +15,25 @@ Plastic pollution is a major and growing problem, negatively affecting oceans an
 
 Additionally, National Geographic ran a data visualization communication contest on plastic waste as seen [here](https://www.nationalgeographic.org/funding-opportunities/innovation-challenges/plastic/dataviz/).
 
+![](images/plastic.jpg){width="836"}
+
 ## Plastic data
 
 The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. By typing library(tidyverse) we are asking R to load all of the tidyverse packages, including ggplot2. We are also going to load in our global plastic waste data set from a .csv file stored on my computer using the read_csv() function.
-
-read_csv(getURL("https://raw.githubusercontent.com/kmblincow/UVIDataScience1_F24/main/data/plastic-waste.csv"))
 
 ```{r setup, output = FALSE}
 knitr::opts_chunk$set(echo = TRUE) 
 
 library(tidyverse) #this call loads all tidyverse packages (including ggplot2)
-library(RCurl)
-plastic_waste <- read_csv(getURL("https://raw.githubusercontent.com/kmblincow/UVIDataScience1_F24/main/data/plastic-waste.csv"))
+```
+
+```{r, echo = FALSE}
+plastic_waste <- read.csv("https://raw.githubusercontent.com/kmblincow/UVIDataScience1_F24/main/data/plastic-waste.csv")
 ```
 
 ```{webr-r}
 #load our data
-
+plastic_waste <- read.csv("https://raw.githubusercontent.com/kmblincow/UVIDataScience1_F24/main/data/plastic-waste.csv")
 ```
 
 That data set we have loaded has the following variable descriptions:
