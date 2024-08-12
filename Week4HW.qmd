@@ -17,6 +17,8 @@ Additionally, National Geographic ran a data visualization communication contest
 
 ![](images/plastic.jpg){width="836"}
 
+*Image: Mahamed Abdulraheem - Shutterstock.com*
+
 ## Plastic data
 
 The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. By typing library(tidyverse) we are asking R to load all of the tidyverse packages, including ggplot2. We are also going to load in our global plastic waste data set from a .csv file stored on my computer using the read_csv() function.
