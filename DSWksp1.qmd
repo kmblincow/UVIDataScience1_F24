@@ -11,14 +11,6 @@ In this tutorial, we will introduce some reasons why data visualization is a cri
 
 The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.
 
-```{r setup, output = FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-library(dplyr) #package with useful data manipulation functions
-library(ggplot2) #package allowing us to make plots
-library(medicaldata) #package containing our data
-```
-
 ## Why is data visualization important?
 
 When we consider the data science workflow (Fig. 1), there is not a step that explicitly says "data visualization". This is because data visualization is so essential that it occurs throughout the entire process!\
