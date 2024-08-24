@@ -1,0 +1,327 @@
+---
+title: "Week 3: Data Visualization Part 1"
+webr:
+  channel-type: 'automatic'
+  packages: ["ggplot2", "medicaldata", "dplyr", "tidyr"]
+filters:
+  - webr
+---
+
+In this tutorial, we will introduce some reasons why data visualization is a critical aspect of data science and demonstrate the basics of creating effective data visualizations in R using ggplot2.
+
+The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.
+
+```{r setup, output = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(dplyr) #package with useful data manipulation functions
+library(ggplot2) #package allowing us to make plots
+library(medicaldata) #package containing our data
+```
+
+## Why is data visualization important?
+
+When we consider the data science workflow (Fig. 1), there is not a step that explicitly says "data visualization". This is because data visualization is so essential that it occurs throughout the entire process!\
+![Figure 1. Data science life cycle. (Drawn by Chanin Nantasenamat in collaboration with Ken Jee)](images/DataScienceProcess.png)
+
+*Figure 1. Data science life cycle. (Drawn by Chanin Nantasenamat in collaboration with Ken Jee; [Source Article](https://towardsdatascience.com/the-data-science-process-a19eb7ebc41b))*
+
+At its core, data visualization is used to simplify complex data. Data scientists often work with very large data sets (think millions of rows) and it is exceedingly difficult to conceptualize those data when interacting with them in table form. Using data visualization techniques, data scientists are able to:
+
+-   identify (sometimes unexpected) patterns and trends in data
+-   identify errors or weirdnesses in data
+-   establish expectations for relationships in data to inform understanding of analysis results
+-   communicate the results of their efforts to others
+
+Your first step is ALWAYS to visualize your data!
+
+## Data visualization in R
+
+There are a number of different tools that can aid in visualizing data in the R environment. Below is a selection of some of the tools available.
+
+-   **ggplot2**: A powerful and flexible plotting package based on the grammar of graphics, allowing for the creation of complex multi-layered plots with consistent syntax.
+-   **base R**: The default plotting system in R, offering simple and straightforward functions for plotting with basic customization options. (I often use base R plots for quick exploratory visualizations).
+-   **plotly**: An interactive graphing package that builds on ggplot2, allowing users to create dynamic, web-based interactive visualizations. For example, you can have a plot display a written value when hovering over a data point.
+-   **shiny**: A web application framework for R that allows users to create interactive web apps with reactive elements, including dynamic and responsive plots. This is a common tool for creating interactive data dashboards in R.
+
+You are encouraged to explore these tools and others, but for the purposes of this lab, we will be focusing on ggplot2. You can find additional information on the ggplot2 package [here](https://ggplot2.tidyverse.org/).
+
+## Our data set: James Lind's scurvy study
+
+Scurvy was a common affliction among sailors in the 1700s. James Lind's scurvy dataset includes information on the severity of symptoms of twelve scurvy patients after being treated with one of the following remedies: cider, dilute sulfuric acide, sea water, vinegar, citrus, and purgative mixture. These data are included in the medicaldata package in R and were originally published in James Lind's *A Treatise on the Scurvy in Three Parts* in 1757.
+
+\
+**Arrrr, Ye Got Scurvy Mate?**
+
+![](images/clipboard-3292047881.png) ![](images/clipboard-1524364916.png){width="350"}
+
+Run the code chunk below to load the data and take a quick look at it.
+
+```{webr-r}
+#create an object called scurvy containing our data
+scurvy <- scurvy
+
+#print the first six rows of the data
+head(scurvy)
+
+```
+
+```{webr-r}
+#print the column names from the data set
+colnames(scurvy)
+```
+
+You can see the data includes information on the patient id (study_id), treatment, dosing regimen, severity of symptoms, and whether the sailors were fit for duty after treatment.
+
+However, looking at the data this way, we can't really discern patterns that might exist. For example, which treatment seemed to reduce the severity of symptoms? Which treatment was associated with the lowest severity of gum rot overall?
+
+By visualizing the data we can find answers to these questions and more!
+
+## Let's visualize some data!
+
+In this section we will demonstrate how to make a visualization using ggplot2.
+
+For this first example, each line of code includes a comment (denoted by #) that describes what that line is doing. In general, it's good practice to go line by line in code you receive to ensure you fully understand what it's doing.
+
+In the exercise code chunks, you will be required to fill in the missing code (denoted by #FILLMEIN) to create the visualization.
+
+\
+*Demonstration:*\
+We are going to start by making a plot that will show us the number of patients associated with each level of symptom severity for gum rot colored by treatment type. Spend some time looking at the code and consider what you think the resulting plot will look like before running the chunk below.
+
+```{webr-r}
+#DEMONSTRATION (RUN THIS CHUNK TO SEE WHAT IS CREATED)
+
+#create our visualization using ggplot2
+ggplot( #call the ggplot function to create a plot
+  data = scurvy, #specify the object containing our data
+  mapping = #tell ggplot which parts of our data we want to use
+    aes(x = gum_rot_d6, #put bum rot on the x axis
+        fill = treatment)) + #color the fill of elements by treatment
+  geom_bar() #tell R we want a bar plot
+```
+
+Does the resulting plot match what you expected the code to generate?
+
+*EXERCISE 1:*
+
+Adjust the code chunk below to create a plot that will show us the number of patients associated with each level of symptom severity for skin sores colored by treatment type.
+
+*(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don't forget about commas!)*
+
+```{webr-r}
+#EXERCISE 1
+ggplot(data = #FILLMEIN
+       mapping = aes(x = #FILLMEIN
+                     fill = #FILLMEIN
+                     )) +
+  geom_bar()
+```
+
+*ANALYSIS INTERLUDE:*
+
+Based on your plots, were there more patients with sever gum rot or skin sores? Which treatment do you think is the best so far?
+
+```{webr-r}
+#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE
+
+```
+
+## Asking more scurvy questions
+
+Run the code chunks in this section to see how visualizations can help us get answers to research questions related to the penguins data set.
+
+***Research Question:*** ***Which symptom had the most severe cases?***
+
+To answer this question it will help us if our data is in *long format*. This will allow us to have a single column for symptom, rather than each symptom having it's own column. Take a look at the output from the code chunk below and notice the changes to the data set.
+
+```{webr-r}
+#do some quick data manipulation to convert to long format 
+#(we will talk about this more next week)
+scurvy_long <- pivot_longer(scurvy, 
+                            cols = 4:7, 
+                            names_to = "symptom",
+                            values_to = "severity")
+
+#we just created a new dataset "scurvy_long"
+
+#take a look at our new data
+head(scurvy_long)
+```
+
+You can see now all our symptom columns have been collapsed into a single column "symptom". This also means that our study_id, treatment, and dosing_regimen_for_scurvy columns have repeated rows for each unique symptom value.
+
+Having the data formatted this way makes it easier to make visualizations comparing symptoms.
+
+```{webr-r}
+#which symptom had the most severe cases?
+ggplot(data = scurvy_long, 
+       mapping = aes(x = severity,
+                     fill = symptom)) + 
+  geom_bar(position = "dodge", #tell R we want bars side by side, instead of stacked
+           color = "black") + #tell R we want a black outline around bars
+  scale_fill_viridis_d() #use a color blind friendly palette
+```
+
+Based on this figure, we can see that lassitude had the highest number of severe cases, followed by skin sores and weakness of the knees.
+
+*EXERCISE 2:*
+
+Adjust the code chunk below to create a plot that will show us which treatment type seemed to perform the best for reducing severity of scurvy symptoms.
+
+*(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don't forget about commas!)*
+
+```{webr-r}
+#EXERCISE 2
+ggplot(data = #FILLMEIN
+       mapping = aes(x = #FILLMEIN
+                     fill = #FILLMEIN
+                     )) +
+  geom_bar(color = "black") +
+  scale_fill_viridis_d()
+```
+
+Which treatment works best for treating scurvy?
+
+```{webr-r}
+#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE
+```
+
+## Adding continuous variables
+
+The data sets we have been working with thus far have consisted solely of *categorical data (*e.g. Severity (none, mile, moderate, severe). This means that we are limited to looking at the number of observations in each category, chiefly with bar plots. *Numerical or continuous data* consists of continuous number values and opens up new possibilities for data visualization.
+
+We are going to use a made up data set to explore how we visualize continuous data. These data will consist of observations of incidences of scurvy among ship crews. They will include data on the weight, height, and age of each sailor, whether they contracted scurvy or not, which ship they sailed on, and they year the ship was active.
+
+Run the code chunk below to generate the new data set (don't worry if you don't follow what the code is doing, we just need the data).
+
+```{webr-r}
+#generate new data set (don't worry about this, just run it)
+set.seed(80085)
+scurvy_bm <- data.frame(
+  ship = rep("The Black Marauder", 15),
+  weight_kg = sort(rnorm(15, 75, 5)),
+  height_m = sort(rnorm(15, 1.7, 0.2)),
+  age = round(rnorm(15, 20, 2)),
+  scurvy = c(rep("N", 4), "Y", "Y", "N", rep("Y", 8)),
+  year = rep(1742, 15)
+)
+
+scurvy_ss <- data.frame(
+  ship = rep("Sea Serpent", 18),
+  weight_kg = sort(rnorm(18, 80, 5)),
+  height_m = sort(rnorm(18, 1.7, 0.2)),
+  age = round(rnorm(18, 20, 2)),
+  scurvy = c(rep("N", 3), "Y", "N", "Y", "N", rep("Y", 11)),
+  year = rep(1743, 18)
+)
+
+scurvy_cc <- data.frame(
+  ship = rep("Crimson Corsair", 17),
+  weight_kg = sort(rnorm(17, 77, 5)),
+  height_m = sort(rnorm(17, 1.7, 0.2)),
+  age = round(rnorm(17, 20, 2)),
+  scurvy = c(rep("N", 11), "Y", "Y", rep("N", 4)),
+  year = rep(1764, 17)
+)
+
+scurvy_ship <- rbind(scurvy_bm, scurvy_ss, scurvy_cc)
+```
+
+Now that we have the data you can take a quick look at it
+
+```{webr-r}
+head(scurvy_ship)
+```
+
+Notice that weight, height, and age are all numeric values. Also scurvy incidence is coded as N for no scurvy or Y for yes scurvy.
+
+***Research Question:*** ***How does the weight of sailors differ across ships?***
+
+We can use a box plot or violin plot to look for differences in a continuous variable (weight) across categorical variables (ship).
+
+```{webr-r}
+ggplot(data = scurvy_ship,         
+       mapping = aes(x = ship,                      
+                     y = weight_kg)) +   
+  geom_boxplot()
+```
+
+```{webr-r}
+ggplot(data = scurvy_ship,         
+       mapping = aes(x = ship,                      
+                     y = weight_kg)) +   
+  geom_violin()
+```
+
+Both of these plots show us that the Sea Serpent had the heaviest sailors.
+
+\
+***Research Question: What is the relationship between height and weight?***
+
+We can use a scatterplot to look at the relationship of two continuous variables against each other.
+
+```{webr-r}
+ggplot(data = scurvy_ship,
+       mapping = aes(x = weight_kg,
+                     y = height_m)) +
+  geom_point() #tell R we want to plot points (aka a scatter_plot)
+```
+
+Unsurprisingly, we see that weight generally increases with height.
+
+***Research Question: Does the relationship between height and weight differ across ships?***
+
+We can use color to show whether continuous relationships differ across a categorical variable.
+
+```{webr-r}
+ggplot(data = scurvy_ship,
+       mapping = aes(x = weight_kg,
+                     y = height_m,
+                     color = ship)) + #color the points by ship
+  geom_point() #tell R we want to plot points (aka a scatter_plot)
+```
+
+It doesn't look like there is much a difference in the trend between ships, but the Sea Serpent tends to have shorter sailors for a given weight value than the other ships.
+
+## FINAL EXERCISE: Your turn!
+
+Create **three visualizations** addressing the following research questions:
+
+1.  Does the incidence of scurvy seem to be related to height?
+
+2.  Does the incidence of scurvy seem to be related to age?
+
+3.  Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind's publication was released)
+
+*Research Question:* Does the incidence of scurvy seem to be related to height?
+
+```{webr-r}
+#ENTER YOUR CODE FOR RESEARCH QUESTION 1 VISUALIZATION HERE
+```
+
+```{webr-r}
+#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 1 HERE AND SCREENSHOT
+```
+
+*Research Question:* *Does the incidence of scurvy seem to be related to age?*
+
+```{webr-r}
+#ENTER YOUR CODE FOR RESEARCH QUESTION 2 VISUALIZATION HERE
+```
+
+```{webr-r}
+#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 2 HERE AND SCREENSHOT
+```
+
+*Research Question:* *Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind's publication was released)*
+
+```{webr-r}
+#ENTER YOUR CODE FOR RESEARCH QUESTION 3 VISUALIZATION HERE
+```
+
+```{webr-r}
+#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 3 HERE AND SCREENSHOT
+```
+
+*Questions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow\@gmail.com*.
