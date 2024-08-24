@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 4: Global Plastic Waste – UVI Data Science 1</title>
+<title>Week 3: Data Visualization Part 1 – UVI Data Science 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -368,7 +334,7 @@ body.reveal.quarto-dark div.qwebr-console-area {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['ggplot2', 'palmerpenguins', 'dplyr', 'RCurl', 'readr'];
+globalThis.qwebrInstallRPackagesList = ['ggplot2', 'medicaldata', 'dplyr', 'tidyr'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -390,7 +356,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"comment":"","label":"unnamed-chunk-1","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#load our data\nplastic_waste <- read.csv(\"https://raw.githubusercontent.com/kmblincow/UVIDataScience1_F24/main/data/plastic-waste.csv\")","id":1},{"options":{"comment":"","label":"unnamed-chunk-2","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":2},{"options":{"comment":"","label":"unnamed-chunk-3","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":3},{"options":{"comment":"","label":"unnamed-chunk-4","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":4},{"options":{"comment":"","label":"unnamed-chunk-5","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":5},{"options":{"comment":"","label":"unnamed-chunk-6","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":6},{"options":{"comment":"","label":"unnamed-chunk-7","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":7},{"options":{"comment":"","label":"unnamed-chunk-8","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":8},{"options":{"comment":"","label":"unnamed-chunk-9","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":9},{"options":{"comment":"","label":"unnamed-chunk-10","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":10},{"options":{"comment":"","label":"unnamed-chunk-11","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":11},{"options":{"comment":"","label":"unnamed-chunk-12","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":12},{"options":{"comment":"","label":"unnamed-chunk-13","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":13},{"options":{"comment":"","label":"unnamed-chunk-14","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":14},{"options":{"comment":"","label":"unnamed-chunk-15","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#ADD CODE HERE AND SCREENSHOT CODE/OUTPUT","id":15},{"options":{"comment":"","label":"unnamed-chunk-16","warning":"true","context":"interactive","fig-cap":"","editor-word-wrap":"true","editor-font-scale":"1","out-height":"","dpi":72,"output":"true","message":"true","fig-height":5,"editor-max-height":"","read-only":"false","fig-width":7,"out-width":"700px","classes":"","autorun":"false","editor-quick-suggestions":"false","results":"markup"},"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT","id":16}];
+globalThis.qwebrCellDetails = [{"code":"#create an object called scurvy containing our data\nscurvy <- scurvy\n\n#print the first six rows of the data\nhead(scurvy)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-1","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":1},{"code":"#print the column names from the data set\ncolnames(scurvy)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-2","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":2},{"code":"#DEMONSTRATION (RUN THIS CHUNK TO SEE WHAT IS CREATED)\n\n#create our visualization using ggplot2\nggplot( #call the ggplot function to create a plot\n  data = scurvy, #specify the object containing our data\n  mapping = #tell ggplot which parts of our data we want to use\n    aes(x = gum_rot_d6, #put bum rot on the x axis\n        fill = treatment)) + #color the fill of elements by treatment\n  geom_bar() #tell R we want a bar plot","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-3","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":3},{"code":"#EXERCISE 1\nggplot(data = #FILLMEIN\n       mapping = aes(x = #FILLMEIN\n                     fill = #FILLMEIN\n                     )) +\n  geom_bar()","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-4","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":4},{"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-5","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":5},{"code":"#do some quick data manipulation to convert to long format \n#(we will talk about this more next week)\nscurvy_long <- pivot_longer(scurvy, \n                            cols = 4:7, \n                            names_to = \"symptom\",\n                            values_to = \"severity\")\n\n#we just created a new dataset \"scurvy_long\"\n\n#take a look at our new data\nhead(scurvy_long)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-6","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":6},{"code":"#which symptom had the most severe cases?\nggplot(data = scurvy_long, \n       mapping = aes(x = severity,\n                     fill = symptom)) + \n  geom_bar(position = \"dodge\", #tell R we want bars side by side, instead of stacked\n           color = \"black\") + #tell R we want a black outline around bars\n  scale_fill_viridis_d() #use a color blind friendly palette","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-7","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":7},{"code":"#EXERCISE 2\nggplot(data = #FILLMEIN\n       mapping = aes(x = #FILLMEIN\n                     fill = #FILLMEIN\n                     )) +\n  geom_bar(color = \"black\") +\n  scale_fill_viridis_d()","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-8","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":8},{"code":"#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-9","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":9},{"code":"#generate new data set (don't worry about this, just run it)\nset.seed(80085)\nscurvy_bm <- data.frame(\n  ship = rep(\"The Black Marauder\", 15),\n  weight_kg = sort(rnorm(15, 75, 5)),\n  height_m = sort(rnorm(15, 1.7, 0.2)),\n  age = round(rnorm(15, 20, 2)),\n  scurvy = c(rep(\"N\", 4), \"Y\", \"Y\", \"N\", rep(\"Y\", 8)),\n  year = rep(1742, 15)\n)\n\nscurvy_ss <- data.frame(\n  ship = rep(\"Sea Serpent\", 18),\n  weight_kg = sort(rnorm(18, 80, 5)),\n  height_m = sort(rnorm(18, 1.7, 0.2)),\n  age = round(rnorm(18, 20, 2)),\n  scurvy = c(rep(\"N\", 3), \"Y\", \"N\", \"Y\", \"N\", rep(\"Y\", 11)),\n  year = rep(1743, 18)\n)\n\nscurvy_cc <- data.frame(\n  ship = rep(\"Crimson Corsair\", 17),\n  weight_kg = sort(rnorm(17, 77, 5)),\n  height_m = sort(rnorm(17, 1.7, 0.2)),\n  age = round(rnorm(17, 20, 2)),\n  scurvy = c(rep(\"N\", 11), \"Y\", \"Y\", rep(\"N\", 4)),\n  year = rep(1764, 17)\n)\n\nscurvy_ship <- rbind(scurvy_bm, scurvy_ss, scurvy_cc)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-10","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":10},{"code":"head(scurvy_ship)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-11","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":11},{"code":"ggplot(data = scurvy_ship,         \n       mapping = aes(x = ship,                      \n                     y = weight_kg)) +   \n  geom_boxplot()","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-12","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":12},{"code":"ggplot(data = scurvy_ship,         \n       mapping = aes(x = ship,                      \n                     y = weight_kg)) +   \n  geom_violin()","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-13","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":13},{"code":"ggplot(data = scurvy_ship,\n       mapping = aes(x = weight_kg,\n                     y = height_m)) +\n  geom_point() #tell R we want to plot points (aka a scatter_plot)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-14","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":14},{"code":"ggplot(data = scurvy_ship,\n       mapping = aes(x = weight_kg,\n                     y = height_m,\n                     color = ship)) + #color the points by ship\n  geom_point() #tell R we want to plot points (aka a scatter_plot)","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-15","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":15},{"code":"#ENTER YOUR CODE FOR RESEARCH QUESTION 1 VISUALIZATION HERE","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-16","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":16},{"code":"#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 1 HERE AND SCREENSHOT","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-17","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":17},{"code":"#ENTER YOUR CODE FOR RESEARCH QUESTION 2 VISUALIZATION HERE","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-18","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":18},{"code":"#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 2 HERE AND SCREENSHOT","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-19","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":19},{"code":"#ENTER YOUR CODE FOR RESEARCH QUESTION 3 VISUALIZATION HERE","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-20","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":20},{"code":"#WRITE YOUR ANSWER TO THE RESEARCH QUESTION 3 HERE AND SCREENSHOT","options":{"warning":"true","context":"interactive","editor-max-height":"","fig-width":7,"out-height":"","classes":"","output":"true","label":"unnamed-chunk-21","comment":"","results":"markup","fig-cap":"","message":"true","autorun":"false","dpi":72,"fig-height":5,"read-only":"false","out-width":"700px","editor-quick-suggestions":"false","editor-word-wrap":"true","editor-font-scale":"1"},"id":21}];
 
 </script>
 <script type="module">
@@ -1640,10 +1606,13 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-problem-of-plastic" id="toc-the-problem-of-plastic" class="nav-link active" data-scroll-target="#the-problem-of-plastic">The problem of plastic</a></li>
-  <li><a href="#plastic-data" id="toc-plastic-data" class="nav-link" data-scroll-target="#plastic-data">Plastic data</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  <li><a href="#do-it-on-your-own" id="toc-do-it-on-your-own" class="nav-link" data-scroll-target="#do-it-on-your-own">Do it on your own</a></li>
+  <li><a href="#why-is-data-visualization-important" id="toc-why-is-data-visualization-important" class="nav-link active" data-scroll-target="#why-is-data-visualization-important">Why is data visualization important?</a></li>
+  <li><a href="#data-visualization-in-r" id="toc-data-visualization-in-r" class="nav-link" data-scroll-target="#data-visualization-in-r">Data visualization in R</a></li>
+  <li><a href="#our-data-set-james-linds-scurvy-study" id="toc-our-data-set-james-linds-scurvy-study" class="nav-link" data-scroll-target="#our-data-set-james-linds-scurvy-study">Our data set: James Lind’s scurvy study</a></li>
+  <li><a href="#lets-visualize-some-data" id="toc-lets-visualize-some-data" class="nav-link" data-scroll-target="#lets-visualize-some-data">Let’s visualize some data!</a></li>
+  <li><a href="#asking-more-scurvy-questions" id="toc-asking-more-scurvy-questions" class="nav-link" data-scroll-target="#asking-more-scurvy-questions">Asking more scurvy questions</a></li>
+  <li><a href="#adding-continuous-variables" id="toc-adding-continuous-variables" class="nav-link" data-scroll-target="#adding-continuous-variables">Adding continuous variables</a></li>
+  <li><a href="#final-exercise-your-turn" id="toc-final-exercise-your-turn" class="nav-link" data-scroll-target="#final-exercise-your-turn">FINAL EXERCISE: Your turn!</a></li>
   </ul>
 </nav>
     </div>
@@ -1936,7 +1905,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 4: Global Plastic Waste</h1>
+<h1 class="title">Week 3: Data Visualization Part 1</h1>
 </div>
 
 
@@ -1953,239 +1922,144 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>This tutorial is a modified version Data Science in Box’s Lab 02 - Global plastic waste found <a href="https://datasciencebox.org/course-materials/lab-instructions/lab-02/lab-02-plastic-waste#learning-goals">here</a>. All material and concepts should be attributed to the Data Science in a Box initiative.</p>
-<section id="the-problem-of-plastic" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem-of-plastic">The problem of plastic</h2>
-<p>Plastic pollution is a major and growing problem, negatively affecting oceans and wildlife health. <a href="https://ourworldindata.org/plastic-pollution">Our World in Data</a> has a lot of great data at various levels including globally, per country, and over time. For this lab we focus on data from 2010.</p>
-<p>Additionally, National Geographic ran a data visualization communication contest on plastic waste as seen <a href="https://www.nationalgeographic.org/funding-opportunities/innovation-challenges/plastic/dataviz/">here</a>.</p>
-<p><img src="images/plastic.jpg" class="img-fluid" width="836"></p>
-<p><em>Image: Mahamed Abdulraheem - Shutterstock.com</em></p>
+<p>In this tutorial, we will introduce some reasons why data visualization is a critical aspect of data science and demonstrate the basics of creating effective data visualizations in R using ggplot2.</p>
+<p>The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.</p>
+<section id="why-is-data-visualization-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-data-visualization-important">Why is data visualization important?</h2>
+<p>When we consider the data science workflow (Fig. 1), there is not a step that explicitly says “data visualization”. This is because data visualization is so essential that it occurs throughout the entire process!<br>
+<img src="images/DataScienceProcess.png" class="img-fluid" alt="Figure 1. Data science life cycle. (Drawn by Chanin Nantasenamat in collaboration with Ken Jee)"></p>
+<p><em>Figure 1. Data science life cycle. (Drawn by Chanin Nantasenamat in collaboration with Ken Jee; <a href="https://towardsdatascience.com/the-data-science-process-a19eb7ebc41b">Source Article</a>)</em></p>
+<p>At its core, data visualization is used to simplify complex data. Data scientists often work with very large data sets (think millions of rows) and it is exceedingly difficult to conceptualize those data when interacting with them in table form. Using data visualization techniques, data scientists are able to:</p>
+<ul>
+<li>identify (sometimes unexpected) patterns and trends in data</li>
+<li>identify errors or weirdnesses in data</li>
+<li>establish expectations for relationships in data to inform understanding of analysis results</li>
+<li>communicate the results of their efforts to others</li>
+</ul>
+<p>Your first step is ALWAYS to visualize your data!</p>
 </section>
-<section id="plastic-data" class="level2">
-<h2 class="anchored" data-anchor-id="plastic-data">Plastic data</h2>
-<p>The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. By typing library(tidyverse) we are asking R to load all of the tidyverse packages, including ggplot2. We are also going to load in our global plastic waste data set from a .csv file stored on my computer using the read_csv() function.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>) </span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co">#this call loads all tidyverse packages (including ggplot2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="data-visualization-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="data-visualization-in-r">Data visualization in R</h2>
+<p>There are a number of different tools that can aid in visualizing data in the R environment. Below is a selection of some of the tools available.</p>
+<ul>
+<li><strong>ggplot2</strong>: A powerful and flexible plotting package based on the grammar of graphics, allowing for the creation of complex multi-layered plots with consistent syntax.</li>
+<li><strong>base R</strong>: The default plotting system in R, offering simple and straightforward functions for plotting with basic customization options. (I often use base R plots for quick exploratory visualizations).</li>
+<li><strong>plotly</strong>: An interactive graphing package that builds on ggplot2, allowing users to create dynamic, web-based interactive visualizations. For example, you can have a plot display a written value when hovering over a data point.</li>
+<li><strong>shiny</strong>: A web application framework for R that allows users to create interactive web apps with reactive elements, including dynamic and responsive plots. This is a common tool for creating interactive data dashboards in R.</li>
+</ul>
+<p>You are encouraged to explore these tools and others, but for the purposes of this lab, we will be focusing on ggplot2. You can find additional information on the ggplot2 package <a href="https://ggplot2.tidyverse.org/">here</a>.</p>
+</section>
+<section id="our-data-set-james-linds-scurvy-study" class="level2">
+<h2 class="anchored" data-anchor-id="our-data-set-james-linds-scurvy-study">Our data set: James Lind’s scurvy study</h2>
+<p>Scurvy was a common affliction among sailors in the 1700s. James Lind’s scurvy dataset includes information on the severity of symptoms of twelve scurvy patients after being treated with one of the following remedies: cider, dilute sulfuric acide, sea water, vinegar, citrus, and purgative mixture. These data are included in the medicaldata package in R and were originally published in James Lind’s <em>A Treatise on the Scurvy in Three Parts</em> in 1757.</p>
+<p><br>
+<strong>Arrrr, Ye Got Scurvy Mate?</strong></p>
+<p><img src="images/clipboard-3292047881.png" class="img-fluid"> <img src="images/clipboard-1524364916.png" class="img-fluid" width="350"></p>
+<p>Run the code chunk below to load the data and take a quick look at it.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>That data set we have loaded has the following variable descriptions:</p>
-<ul>
-<li><p><code>code</code>: 3 Letter country code</p></li>
-<li><p><code>entity</code>: Country name</p></li>
-<li><p><code>continent</code>: Continent name</p></li>
-<li><p><code>year</code>: Year</p></li>
-<li><p><code>gdp_per_cap</code>: GDP per capita constant 2011 international $, rate</p></li>
-<li><p><code>plastic_waste_per_cap</code>: Amount of plastic waste per capita in kg/day</p></li>
-<li><p><code>mismanaged_plastic_waste_per_cap</code>: Amount of mismanaged plastic waste per capita in kg/day</p></li>
-<li><p><code>mismanaged_plastic_waste</code>: Tonnes of mismanaged plastic waste</p></li>
-<li><p><code>coastal_pop</code>: Number of individuals living on/near coast</p></li>
-<li><p><code>total_pop</code>: Total population according to Gapminder</p></li>
-</ul>
-<p>What are some ways you can explore the data set we just loaded in the R environment? Type a couple things in the chunk below and screenshot the resulting code/output for your HW assignment.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>You can see the data includes information on the patient id (study_id), treatment, dosing regimen, severity of symptoms, and whether the sailors were fit for duty after treatment.</p>
+<p>However, looking at the data this way, we can’t really discern patterns that might exist. For example, which treatment seemed to reduce the severity of symptoms? Which treatment was associated with the lowest severity of gum rot overall?</p>
+<p>By visualizing the data we can find answers to these questions and more!</p>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<p>Let’s start by looking at the distribution of plastic waste per capita in 2010.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, <span class="fu">aes</span>(<span class="at">x =</span> plastic_waste_per_cap)) <span class="sc">+</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_bin()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>One country stands out as an unusual observation at the top of the distribution. One way of identifying this country is to filter the data for countries where plastic waste per capita is greater than 3.5 kg/person.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plastic_waste <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(plastic_waste_per_cap <span class="sc">&gt;</span> <span class="fl">3.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  code              entity     continent year gdp_per_cap plastic_waste_per_cap
-1  TTO Trinidad and Tobago North America 2010    31260.91                   3.6
-  mismanaged_plastic_waste_per_cap mismanaged_plastic_waste coastal_pop
-1                             0.19                    94066     1358433
-  total_pop
-1   1341465</code></pre>
-</div>
-</div>
-<p>Did you expect this result? You might consider doing some research on Trinidad and Tobago to see why plastic waste per capita is so high there, or whether this is a data error.</p>
-<ul>
-<li>Plot, using histograms, the distribution of plastic waste per capita faceted by continent. (HINT: Have you watched the video for this week yet??)</li>
-</ul>
+<section id="lets-visualize-some-data" class="level2">
+<h2 class="anchored" data-anchor-id="lets-visualize-some-data">Let’s visualize some data!</h2>
+<p>In this section we will demonstrate how to make a visualization using ggplot2.</p>
+<p>For this first example, each line of code includes a comment (denoted by #) that describes what that line is doing. In general, it’s good practice to go line by line in code you receive to ensure you fully understand what it’s doing.</p>
+<p>In the exercise code chunks, you will be required to fill in the missing code (denoted by #FILLMEIN) to create the visualization.</p>
+<p><br>
+<em>Demonstration:</em><br>
+We are going to start by making a plot that will show us the number of patients associated with each level of symptom severity for gum rot colored by treatment type. Spend some time looking at the code and consider what you think the resulting plot will look like before running the chunk below.</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>What can you say about how the continents compare to each other in terms of their plastic waste per capita?</li>
-</ul>
+<p>Does the resulting plot match what you expected the code to generate?</p>
+<p><em>EXERCISE 1:</em></p>
+<p>Adjust the code chunk below to create a plot that will show us the number of patients associated with each level of symptom severity for skin sores colored by treatment type.</p>
+<p><em>(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don’t forget about commas!)</em></p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Another way of visualizing numerical data is using density plots.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, <span class="fu">aes</span>(<span class="at">x =</span> plastic_waste_per_cap)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>And compare distributions across continents by colouring density curves by continent.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> plastic_waste_per_cap, </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>The resulting plot may be a little difficult to read, so let’s also fill the curves in with colours as well.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> plastic_waste_per_cap, </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> continent, </span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>The overlapping colours make it difficult to tell what’s happening with the distributions in continents plotted first, and hence covered by continents plotted over them. We can change the transparency level of the fill color to help with this. The&nbsp;<code>alpha</code>&nbsp;argument takes values between 0 and 1: 0 is completely transparent and 1 is completely opaque. There is no way to tell what value will work best, so you just need to try a few.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> plastic_waste_per_cap, </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">color =</span> continent, </span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                     <span class="at">fill =</span> continent)) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_density()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This still doesn’t look great…</p>
-<ul>
-<li>Recreate the density plots above using a different (lower) alpha level that works better for displaying the density curves for all continents.</li>
-</ul>
+<p><em>ANALYSIS INTERLUDE:</em></p>
+<p>Based on your plots, were there more patients with sever gum rot or skin sores? Which treatment do you think is the best so far?</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Describe why we defined the <code>color</code> and <code>fill</code> of the curves by mapping aesthetics of the plot but we defined the <code>alpha</code> level as a characteristic of the plotting geom.</li>
-</ul>
+</section>
+<section id="asking-more-scurvy-questions" class="level2">
+<h2 class="anchored" data-anchor-id="asking-more-scurvy-questions">Asking more scurvy questions</h2>
+<p>Run the code chunks in this section to see how visualizations can help us get answers to research questions related to the penguins data set.</p>
+<p><strong><em>Research Question:</em></strong> <strong><em>Which symptom had the most severe cases?</em></strong></p>
+<p>To answer this question it will help us if our data is in <em>long format</em>. This will allow us to have a single column for symptom, rather than each symptom having it’s own column. Take a look at the output from the code chunk below and notice the changes to the data set.</p>
 <div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>And yet another way to visualize this relationship is using side-by-side box plots.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> plastic_waste, </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> continent, </span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> plastic_waste_per_cap)) <span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 51 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="Week4HW_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li>Convert your side-by-side box plots from the previous task to&nbsp;<a href="http://ggplot2.tidyverse.org/reference/geom_violin.html">violin plots</a>.</li>
-</ul>
+<p>You can see now all our symptom columns have been collapsed into a single column “symptom”. This also means that our study_id, treatment, and dosing_regimen_for_scurvy columns have repeated rows for each unique symptom value.</p>
+<p>Having the data formatted this way makes it easier to make visualizations comparing symptoms.</p>
 <div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>What do the violin plots reveal that box plots do not? What features are apparent in the box plots but not in the violin plots?</li>
-</ul>
+<p>Based on this figure, we can see that lassitude had the highest number of severe cases, followed by skin sores and weakness of the knees.</p>
+<p><em>EXERCISE 2:</em></p>
+<p>Adjust the code chunk below to create a plot that will show us which treatment type seemed to perform the best for reducing severity of scurvy symptoms.</p>
+<p><em>(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don’t forget about commas!)</em></p>
 <div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="do-it-on-your-own" class="level2">
-<h2 class="anchored" data-anchor-id="do-it-on-your-own">Do it on your own</h2>
-<pre><code>**Remember:** We use `geom_point()` to make scatterplots</code></pre>
-<ul>
-<li>Visualize the relationship between plastic waste per capita and mismanaged plastic waste per capita using a scatterplot.&nbsp;</li>
-</ul>
+<p>Which treatment works best for treating scurvy?</p>
 <div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Describe the relationship.</li>
-</ul>
+</section>
+<section id="adding-continuous-variables" class="level2">
+<h2 class="anchored" data-anchor-id="adding-continuous-variables">Adding continuous variables</h2>
+<p>The data sets we have been working with thus far have consisted solely of <em>categorical data (</em>e.g.&nbsp;Severity (none, mile, moderate, severe). This means that we are limited to looking at the number of observations in each category, chiefly with bar plots. <em>Numerical or continuous data</em> consists of continuous number values and opens up new possibilities for data visualization.</p>
+<p>We are going to use a made up data set to explore how we visualize continuous data. These data will consist of observations of incidences of scurvy among ship crews. They will include data on the weight, height, and age of each sailor, whether they contracted scurvy or not, which ship they sailed on, and they year the ship was active.</p>
+<p>Run the code chunk below to generate the new data set (don’t worry if you don’t follow what the code is doing, we just need the data).</p>
 <div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Color the points in the scatterplot by continent.</li>
-</ul>
+<p>Now that we have the data you can take a quick look at it</p>
 <div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Does there seem to be any clear distinctions between continents with respect to how plastic waste per capita and mismanaged plastic waste per capita are associated?</li>
-</ul>
+<p>Notice that weight, height, and age are all numeric values. Also scurvy incidence is coded as N for no scurvy or Y for yes scurvy.</p>
+<p><strong><em>Research Question:</em></strong> <strong><em>How does the weight of sailors differ across ships?</em></strong></p>
+<p>We can use a box plot or violin plot to look for differences in a continuous variable (weight) across categorical variables (ship).</p>
 <div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Visualize the relationship between plastic waste per capita and total population as well as plastic waste per capita and coastal population. You will need to make two separate plots.</li>
-</ul>
 <div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Do either of these pairs of variables appear to be more strongly linearly associated?</li>
-</ul>
+<p>Both of these plots show us that the Sea Serpent had the heaviest sailors.</p>
+<p><br>
+<strong><em>Research Question: What is the relationship between height and weight?</em></strong></p>
+<p>We can use a scatterplot to look at the relationship of two continuous variables against each other.</p>
 <div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Recreate the plot pictured below. (HINT: The x-axis is a calculated variable. One country with plastic waste per capita over 3kg/day has been filtered out. And the data are not only represented with points on the plot but also a smooth curve. The “smooth” should help you <a href="https:://ggplot2.tidyverse.org/reference/index.html#section-geoms">pick which geom to use</a>.)</li>
-</ul>
-<p><img src="images/RecreatePlot.png" class="img-fluid"></p>
+<p>Unsurprisingly, we see that weight generally increases with height.</p>
+<p><strong><em>Research Question: Does the relationship between height and weight differ across ships?</em></strong></p>
+<p>We can use color to show whether continuous relationships differ across a categorical variable.</p>
 <div id="qwebr-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ul>
-<li>Write an interpretation of what you see in context of the data.</li>
-</ul>
+<p>It doesn’t look like there is much a difference in the trend between ships, but the Sea Serpent tends to have shorter sailors for a given weight value than the other ships.</p>
+</section>
+<section id="final-exercise-your-turn" class="level2">
+<h2 class="anchored" data-anchor-id="final-exercise-your-turn">FINAL EXERCISE: Your turn!</h2>
+<p>Create <strong>three visualizations</strong> addressing the following research questions:</p>
+<ol type="1">
+<li><p>Does the incidence of scurvy seem to be related to height?</p></li>
+<li><p>Does the incidence of scurvy seem to be related to age?</p></li>
+<li><p>Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)</p></li>
+</ol>
+<p><em>Research Question:</em> Does the incidence of scurvy seem to be related to height?</p>
 <div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-17"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><em>Research Question:</em> <em>Does the incidence of scurvy seem to be related to age?</em></p>
+<div id="qwebr-insertion-location-18"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-19"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><em>Research Question:</em> <em>Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)</em></p>
+<div id="qwebr-insertion-location-20"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-21"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><em>Questions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow@gmail.com</em>.</p>
 
 
 </section>
