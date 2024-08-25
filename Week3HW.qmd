@@ -9,6 +9,12 @@ filters:
 
 In this tutorial, we will introduce some reasons why data visualization is a critical aspect of data science and demonstrate the basics of creating effective data visualizations in R using ggplot2.
 
+A COUPLE IMPORTANT NOTES:
+
+-   Click "Run Code"
+
+-   You will receive some warning outputs in this tutorial related to NAs in the data set. Don't worry about that for right now.
+
 The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.
 
 ```{r setup, output = FALSE}
@@ -64,7 +70,7 @@ The Palmer Penguins dataset includes morphometric information on three different
 
 Run the code chunk below to load the data.
 
-*Add another line of code to the chunk that will output a list of all your columns, what types of variables exist in those columns, and a couple observations from each column. Screenshot your code and output for your HW submission.*
+*Add another line of code to the chunk that will output a list of all your columns, what types of variables exist in those columns, and a couple observations from each column. The necessary function was mentioned in the IDS- Data and visualisation video (around the 2 minute mark). Screenshot your code and output for your HW submission.*
 
 ```{webr-r}
 #create an object called penguins containing our data
@@ -110,7 +116,7 @@ Does the resulting plot match what you expected the code to generate?
 
 Adjust the code chunk below to create a plot that shows the relationship between bill length and body mass by species. Screenshot your code and resulting plot for your homework submission.
 
-*(HINT: You might want to refer back to your column names to ensure you are inputting the write variable names, and don't forget about commas!)*
+*(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don't forget about commas!)*
 
 ```{webr-r}
 #EXERCISE 1
@@ -194,7 +200,7 @@ To receive full points for this exercise, you should provide a written answer to
 
 *HINT: You might need to explore some other geom options.*
 
-*Research Question: Which island has the most Gentoo penguins?*
+*Research Question: Which island has the most Gentoo penguins? (You might consider a bar plot...)*
 
 ```{webr-r}
 #ENTER YOUR CODE FOR RESEARCH QUESTION 1 VISUALIZATION HERE
