@@ -104,11 +104,11 @@ To answer this, we first need to do some data filtering. We are only interested 
 lakersQ1 <- lakers %>%  
   filter(team == "LAL") 
 
-#check to see if that worked
+#check to see if that worked using the unique function on the column of interest
 unique(lakersQ1$team) #should only print "LAL"
 ```
 
-In the above code chunk, I introduced a new coding operator, the pipe, denoted by "%\>%" or "\|\>". You can imagine this translating to "and then". We are creating a new object called lakersQ1. To create this object we take the lakers data "and then" we filter it so that the "team" column only includes "LAL". We use == when filtering (not =). NOTE: we are using the dplyr package filter() function, not the base R filter() function.
+In the above code chunk, I introduced a new coding operator, the pipe, denoted by "%\>%" or "\|\>". You can imagine this translating to "and then". We are creating a new object called lakersQ1. To create this object we take the lakers data "and then" we filter it so that the "team" column only includes "LAL". We use "==" when filtering (not a singular "=" sign). NOTE: we are using the dplyr package filter() function, not the base R filter() function.
 
 Now that we have done that, we need to determine which players committed the most turnovers by keeping only observations associated with turnovers. We can again accomplish this using filtering.
 
@@ -161,7 +161,7 @@ Adjust the following code chunk so that you create an object called "lakersQ2" t
 lakersQ2 <- lakers %>% 
   filter([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE
 
-#check that worked
+#check to see if that worked using the unique function on the column of interest
 unique([FILL ME IN]) #REPLACE [FILL ME IN] WITH YOUR RESPONSE
 ```
 
@@ -193,7 +193,7 @@ head(lakersQ2)
 
 Assuming you completed the three code chunks above correctly, this following code chunk should generate a bar plot of the number of missed free throws for each player.
 
-*Take a screenshot of the resulting plot and include it in your homework response.*
+*Click "Run Code" and take a screenshot of the resulting plot and include it in your homework response.*
 
 ```{webr-r}
 #TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION
@@ -273,7 +273,7 @@ Now let's do the same thing to see who had the most rebounds.
 
 Assuming you completed the code chunk above correctly, the following chunk should generate a plot telling you who got the most rebounds against the Celtics and Cavs last season.
 
-*Take a screenshot of the resulting plot and include it in your HW response.*
+*Click "Run Code" and take a screenshot of the resulting plot and include it in your HW response.*
 
 ```{webr-r}
 #TAKE A SCREEN SHOT OF THIS PLOT AND INLCUDE IT IN YOUR HW SUBMISSION 
@@ -297,14 +297,7 @@ Now, can we accomplish the same task for assists?
 
 ## Concluding remarks
 
-Obviously, I intentionally made this is a very simplified example, as we are just starting to get our feet wet in terms of coding in R, but these types of analyses actually go on behind the scenes for most sports teams.
-
-*Based on our very limited analysis what would your recommendations be to the Lakers coach and manager regarding what to focus on for next season?*
-
-```{webr-r}
-#WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT
-
-```
+Obviously, I intentionally used simplified questions, as we are just starting to get our feet wet in terms of coding in R, but these types of analyses actually go on behind the scenes for most sports teams.
 
 There are much more complicated questions we could ask and analyses we could perform with these data as well. We stuck with questions directly related to the variables present, but we can also take these data another step using data manipulation and analysis tools. Even though the active court lineup is not provided, we could deduce which players were on the court at certain times and ask something like which lineup led to the most points scored? Or which lineup led to the most missed shots by the other team? We could also try predicting outcomes using these data. What is the probability of the Lakers winning a game given the number of minutes Kobe Bryant plays in the first half? How about given the number of consecutive away games they've played?
 
