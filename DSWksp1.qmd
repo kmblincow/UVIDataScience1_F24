@@ -9,7 +9,7 @@ filters:
 
 In this tutorial, we will introduce some reasons why data visualization is a critical aspect of data science and demonstrate the basics of creating effective data visualizations in R using ggplot2.
 
-The code chunk below sets up our coding environment. You will see I use the library() function to call packages. Packages are add ons you can load into R that include specialized functions. For example, ggplot2 is a package with functions that give us a lot of flexibility in creating data visualizations.
+Make sure to click "Run Code" in the interactive code chunks.
 
 ## Why is data visualization important?
 
@@ -40,7 +40,7 @@ You are encouraged to explore these tools and others, but for the purposes of th
 
 ## Our data set: James Lind's scurvy study
 
-Scurvy was a common affliction among sailors in the 1700s. James Lind's scurvy dataset includes information on the severity of symptoms of twelve scurvy patients after being treated with one of the following remedies: cider, dilute sulfuric acide, sea water, vinegar, citrus, and purgative mixture. These data are included in the medicaldata package in R and were originally published in James Lind's *A Treatise on the Scurvy in Three Parts* in 1757.
+Scurvy was a common affliction among sailors in the 1700s. James Lind's scurvy data set includes information on the severity of symptoms of twelve scurvy patients after being treated with one of the following remedies: cider, dilute sulfuric acide, sea water, vinegar, citrus, and purgative mixture. These data are included in the medicaldata package in R and were originally published in James Lind's *A Treatise on the Scurvy in Three Parts* in 1757.
 
 \
 **Arrrr, Ye Got Scurvy Mate?**
@@ -54,7 +54,7 @@ Run the code chunk below to load the data and take a quick look at it.
 scurvy <- scurvy
 
 #print the first six rows of the data
-head(scurvy)
+glimpse(scurvy)
 
 ```
 
@@ -121,7 +121,7 @@ Based on your plots, were there more patients with sever gum rot or skin sores? 
 
 ## Asking more scurvy questions
 
-Run the code chunks in this section to see how visualizations can help us get answers to research questions related to the penguins data set.
+Run the code chunks in this section to see how visualizations can help us get answers to research questions related to the scurvy data set.
 
 ***Research Question:*** ***Which symptom had the most severe cases?***
 
@@ -138,7 +138,7 @@ scurvy_long <- pivot_longer(scurvy,
 #we just created a new dataset "scurvy_long"
 
 #take a look at our new data
-head(scurvy_long)
+glimpse(scurvy_long)
 ```
 
 You can see now all our symptom columns have been collapsed into a single column "symptom". This also means that our study_id, treatment, and dosing_regimen_for_scurvy columns have repeated rows for each unique symptom value.
@@ -181,9 +181,9 @@ Which treatment works best for treating scurvy?
 
 ## Adding continuous variables
 
-The data sets we have been working with thus far have consisted solely of *categorical data (*e.g. Severity (none, mile, moderate, severe). This means that we are limited to looking at the number of observations in each category, chiefly with bar plots. *Numerical or continuous data* consists of continuous number values and opens up new possibilities for data visualization.
+The data set we have been working with thus far have consisted solely of *categorical data (*e.g. Severity (none, mile, moderate, severe). This means that we are limited to looking at the number of observations in each category, chiefly with bar plots. *Numerical or continuous data* consists of continuous number values and opens up new possibilities for data visualization.
 
-We are going to use a made up data set to explore how we visualize continuous data. These data will consist of observations of incidences of scurvy among ship crews. They will include data on the weight, height, and age of each sailor, whether they contracted scurvy or not, which ship they sailed on, and they year the ship was active.
+We are going to use a made up data set to explore how we visualize continuous data. These data will consist of observations of incidences of scurvy among ship crews. They will include data on the weight, height, and age of each sailor, whether they contracted scurvy or not, which ship they sailed on, and the year the ship was active.
 
 Run the code chunk below to generate the new data set (don't worry if you don't follow what the code is doing, we just need the data).
 
@@ -223,7 +223,7 @@ scurvy_ship <- rbind(scurvy_bm, scurvy_ss, scurvy_cc)
 Now that we have the data you can take a quick look at it
 
 ```{webr-r}
-head(scurvy_ship)
+glimpse(scurvy_ship)
 ```
 
 Notice that weight, height, and age are all numeric values. Also scurvy incidence is coded as N for no scurvy or Y for yes scurvy.
