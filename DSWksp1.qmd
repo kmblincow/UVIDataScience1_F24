@@ -1,5 +1,5 @@
 ---
-title: "Week 3: Data Visualization Part 1"
+title: "URISE Workshop: Data Visualization"
 webr:
   channel-type: 'automatic'
   packages: ["ggplot2", "medicaldata", "dplyr", "tidyr"]
