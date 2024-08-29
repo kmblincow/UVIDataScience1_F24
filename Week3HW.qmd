@@ -74,7 +74,7 @@ Run the code chunk below to load the data.
 
 ```{webr-r}
 #create an object called penguins containing our data
-penguins <- data(penguins)
+penguins <- palmerpenguins::penguins
 
 #ADD CODE HERE AND SCREENSHOT CODE/OUTPUT
 ```
