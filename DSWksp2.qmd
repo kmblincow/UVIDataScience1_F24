@@ -1,0 +1,398 @@
+---
+title: "URISE Workshop: Data Wrangling"
+webr:
+  channel-type: 'automatic'
+  packages: ["ggplot2", "hflights", "dplyr", "tidyr"]
+filters:
+  - webr
+---
+
+In this tutorial, we will introduce some of the basic tools used in data wrangling.
+
+Make sure to click "Run Code" in the interactive code chunks.
+
+**NOTE: YOU CAN RUN JUST A PORTION OF ANY CODE CHUNK BY HIGHLIGHTING IT AND USING THE FOLLOWING KEYBOARD SHORTCUTS: PCS - (ctrl + Enter); MACs - (cmd + Enter).**
+
+## Before we get started, some R basics.
+
+Up until now, we have been focusing on gaining enough R coding skills to be able to demonstrate the insights that can be gained from data chiefly through data visualization. Now, we are transitioning into topics that will require a stronger understanding of certain R functions.
+
+Let's start by reviewing how we create objects in our R environment:
+
+```{webr-r}
+# here I am creating an object called thing1 that has a value of 5
+thing1 <- 5
+
+#NOTE: if you were coding in RStudio a new object called thing1 would appear in your environment after running the above code
+
+# and here's an object called thing2 with a value of 2!
+thing2 <- 2
+
+#now that thing1 and thing2 have values, we can use them to make calculations
+thing1 + thing2
+
+```
+
+Even though we are moving to a different code chunk, thing1 and thing2 still exist in our coding environment. That means we can continue to use them.
+
+```{webr-r}
+#we can create a whole new object with our calculation
+thing3 <- thing1 + thing2
+
+#we can of course do more intense calculations, the syntax is generally the same as you probably already know...
+thing4 <- (thing1 + thing2)^2/(thing3 + thing1) * thing3
+
+#what happens if you print thing3? thing4?
+```
+
+It is a good idea to store values as objects if you think you are going to need them in the future.
+
+R is made up of packages and functions, which make it easier for us all to do commonly needed actions. This is a double edged sword. Pre-made functions make it quicker to get some things done, but you don't necessarily know that the code that is behind the function is doing what you think it's doing.
+
+Here are a few examples of functions you might need:
+
+```{webr-r}
+# if you need a list of numbers from 1 to 15 you can "hard code" it like so:
+number_list <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+
+# you can imagine that can get tedious and annoying to type out, especially if you need a list of 1000 numbers! Luckily we've got a function for that: seq()
+# if you aren't sure what arguments the function you are trying to use needs you can type the following
+?seq()
+
+number_list2 <- seq(1, 1000, 2)
+
+#this code generated a list of numbers from 1 to 1000 that increases by a unit of 2 every time
+
+#we can view the first 6 values in number_list2 using head()
+head(number_list2)
+```
+
+Calculating basic summary statistics:
+
+```{webr-r}
+#here are some other functions you might need
+mean(number_list2) #calculates the mean of number_list2
+median(number_list2) #caclulates the median of number_list2
+sd(number_list2) #calculates the standard deviation of number_list2
+
+```
+
+Randomly sampling values from a normal distribution:
+
+```{webr-r}
+
+rnorm(5, mean = 0, sd = 1) #randomly samples 5 values from a normal distribution with a mean of 0 and standard deviation of 1 (which is a Z distribution)
+```
+
+Navigating matrices and dataframes:
+
+```{webr-r}
+m <- matrix(1:30, 10, 3) #generates a matrix of 10 rows and 3 columns populated by values 1 to 30
+m
+
+#we can navigate through matrices and data frames using square brackets
+#the syntax is: matrix[row, column]
+m[3,2] #slect the value that occupies the third row in the second column
+
+m[3:5,1] #select the values that occupy the third through fifth rows in the first column
+```
+
+## Data Wrangling using dplyr
+
+Note: This tutorial is largely created by Kevin Markham--I added some exercises for students to work through.
+
+![](images/clipboard-4162204501.png)
+
+dplyr is a package from the Tidyverse that makes data wrangling much more intuitive and fun!
+
+### Why even use dplyr?
+
+-   Great for data exploration and transformation
+-   Intuitive to write and easy to read, especially when using the "chaining" syntax (covered below)
+-   Fast on data frames
+
+### dplyr functionality
+
+-   Five basic verbs: `filter`, `select`, `arrange`, `mutate`, `summarise` (plus `group_by`)
+
+-   Can work with data stored in databases and [data tables](http://datatable.r-forge.r-project.org/)
+
+-   Joins: inner join, left join, semi-join, anti-join (not covered below)
+
+-   Window functions for calculating ranking, offsets, and more
+
+## Our example data set
+
+-   dplyr will mask a few base functions (namely: filter())
+-   hflights is flights departing from two Houston airports in 2011
+
+```{webr-r}
+# load and explore data
+data(hflights)
+head(hflights)
+```
+
+-   `as_tibble` creates a special tidyverse dataframe called a tibble
+-   tibbles have a number of features, but one of them is that they print more nicely in this type of tutorial environment
+
+```{webr-r}
+# convert to local data frame
+flights <- as_tibble(hflights)
+
+# printing only shows 10 rows and as many columns as can fit on your screen
+flights
+```
+
+```{webr-r}
+# you can specify that you want to see more rows
+print(flights, n=20)
+```
+
+Use glimpse() to get a summary output of all the columns:
+
+```{webr-r}
+glimpse(flights)
+```
+
+## dplyr::filter: Keep rows matching criteria
+
+-   Base R approach to filtering forces you to repeat the data frame's name
+-   dplyr approach is simpler to write and read
+-   Command structure (for all dplyr verbs):
+    -   first argument is a data frame
+    -   return value is a data frame
+    -   nothing is modified in place
+-   Note: dplyr generally does not preserve row names
+
+```{webr-r}
+# base R approach to view all flights on January 1
+flights[flights$Month==1 & flights$DayofMonth==1, ]
+```
+
+```{webr-r}
+# dplyr approach
+# note: you can use comma or ampersand (&) to represent AND condition
+filter(flights, Month==1, DayofMonth==1, UniqueCarrier=="AA")
+```
+
+We can use the "\|" for the OR condition:
+
+```{webr-r}
+# filter for American and United Airlines flights only
+filter(flights, UniqueCarrier=="AA" | UniqueCarrier=="UA")
+```
+
+We can also use the %in% operator to select for specific values in a column:
+
+```{webr-r}
+# filter for American and United Airlines flights only
+filter(flights, UniqueCarrier %in% c("AA", "UA"))
+```
+
+Now you try.. How would we code it if we wanted to view all flights United Airlines or American Airlines flights that departed after 2PM?
+
+```{webr-r}
+#student try
+
+```
+
+## dplyr::select: Pick columns by name
+
+-   Base R approach is awkward to type and to read
+-   dplyr approach uses similar syntax to `filter`
+-   Like a SELECT in SQL
+
+```{webr-r}
+# base R approach to select DepTime, ArrTime, and FlightNum columns
+flights[, c("DepTime", "ArrTime", "FlightNum")]
+```
+
+```{webr-r}
+# dplyr approach
+select(flights, DepTime, ArrTime, FlightNum)
+```
+
+We can use the colon (:) to select multiple contiguous columns, and use 'contains' to match columns by name.
+
+```{webr-r}
+#select all columns from Year to DayofMonth, and column that contain the words Taxi and Delay
+select(flights, Year:DayofMonth, contains("Taxi"), contains("Delay"))
+```
+
+Note: we can also use 'starts_with', 'ends_with', and 'matches' (for regular expressions) to match columns by name.
+
+Now you try: Select all of the columns that contain information about the date and time of the flight, as well as those that contain information about the flight's cancellation.
+
+```{webr-r}
+#Student Try:
+
+```
+
+## "Chaining" or "Pipelining"
+
+-   Usual way to perform multiple operations in one line is by nesting
+-   Can write commands in a natural order by using the `%>%` infix operator (which can be thought of as "and then")
+
+```{webr-r}
+# nesting method to select UniqueCarrier and DepDelay columns and filter for delays over 60 minutes
+filter(select(flights, UniqueCarrier, DepDelay), DepDelay > 60)
+```
+
+```{webr-r}
+# chaining method
+flights %>%
+    select(UniqueCarrier, DepDelay) %>%
+    filter(DepDelay > 60)
+```
+
+-   Chaining increases readability significantly when there are many commands
+-   Operator is automatically imported from the [magrittr](https://github.com/smbache/magrittr) package
+-   Can be used to replace nesting in R commands outside of dplyr
+
+```{webr-r}
+# create two vectors and calculate Euclidian distance between them
+x1 <- 1:5; x2 <- 2:6
+sqrt(sum((x1-x2)^2))
+```
+
+```{webr-r}
+# chaining method
+(x1-x2)^2 %>% sum() %>% sqrt()
+```
+
+Now you try: Using the chaining method select the columns indicating the flight carrier, flight number, and departure time, and filter so I see only United Airlines flights that left after 2PM.
+
+```{webr-r}
+#Student try:
+
+```
+
+## dplyr::arrange: Reorder rows
+
+```{webr-r}
+# base R approach to select UniqueCarrier and DepDelay columns and sort by DepDelay
+flights[order(flights$DepDelay), c("UniqueCarrier", "DepDelay")]
+```
+
+```{webr-r}
+# dplyr approach
+flights %>%
+    select(UniqueCarrier, DepDelay) %>%
+    arrange(DepDelay)
+```
+
+Use desc() to display things in descending order:
+
+```{webr-r}
+# use `desc` for descending
+flights %>%
+    select(UniqueCarrier, DepDelay) %>%
+    arrange(desc(DepDelay))
+```
+
+Now you try: Using piping select all American Airlines flights that left in the afternoon on January 1, and arrange them based on departure times.
+
+```{webr-r}
+#Student Try:
+
+```
+
+## dplyr::mutate: Add new variables
+
+-   Create new variables that are functions of existing variables
+
+```{webr-r}
+# base R approach to create a new variable Speed (in mph)
+flights$Speed <- flights$Distance / flights$AirTime*60
+head(flights[, c("Distance", "AirTime", "Speed")])
+```
+
+```{webr-r}
+# dplyr approach
+flights %>%
+  select(Distance, AirTime) %>%
+  mutate(Speed = Distance/AirTime*60) 
+```
+
+Note that the above code just printed our manipulations, but didn't store them. To store them, we need to use the assignment arrow, as seen in the code chunk below:
+
+```{webr-r}
+# store the new variable
+flights <- flights %>% mutate(Speed = Distance/AirTime*60)
+names(flights)
+```
+
+Now you try: Calculate the total delay of each flight based on the Departure delay and Arrival delay, and store the resulting value.
+
+```{webr-r}
+#Student Try:
+
+```
+
+## dplyr::summarise: Reduce variables to values
+
+-   Primarily useful with data that has been grouped by one or more variables
+-   `group_by` creates the groups that will be operated on
+-   `summarise` uses the provided aggregation function to summarise each group
+
+```{webr-r}
+# base R approaches to calculate the average arrival delay to each destination
+head(with(flights, tapply(ArrDelay, Dest, mean, na.rm=TRUE)))
+head(aggregate(ArrDelay ~ Dest, flights, mean))
+```
+
+```{webr-r}
+# dplyr approach: create a table grouped by Dest, and then summarise each group by taking the mean of ArrDelay
+flights %>%
+    group_by(Dest) %>%
+    summarise(avg_delay = mean(ArrDelay, na.rm=TRUE))
+```
+
+Now you try: Calculate the mean delay in arrival times for each month of the year.
+
+```{webr-r}
+#Student try:
+
+```
+
+-   Helper function `n()` counts the number of rows in a group
+-   Helper function `n_distinct(vector)` counts the number of unique items in that vector
+
+```{webr-r}
+# for each day of the year, count the total number of flights and sort in descending order
+flights %>%
+    group_by(Month, DayofMonth) %>%
+    summarise(flight_count = n()) %>%
+    arrange(desc(flight_count))
+
+# rewrite more simply with the `tally` function
+flights %>%
+    group_by(Month, DayofMonth) %>%
+    tally(sort = TRUE)
+
+# for each destination, count the total number of flights and the number of distinct planes that flew there
+flights %>%
+    group_by(Dest) %>%
+    summarise(flight_count = n(), plane_count = n_distinct(TailNum))
+```
+
+-   Grouping can sometimes be useful without summarising
+
+```{webr-r}
+# for each destination, show the number of cancelled and not cancelled flights
+flights %>%
+    group_by(Dest) %>%
+    select(Cancelled) %>%
+    table() %>%
+    head()
+```
+
+## Resources
+
+-   [Official dplyr reference manual and vignettes on CRAN](http://cran.r-project.org/web/packages/dplyr/index.html): vignettes are well-written and cover many aspects of dplyr
+
+-   [July 2014 webinar about dplyr (and ggvis) by Hadley Wickham](http://pages.rstudio.net/Webinar-Series-Recording-Essential-Tools-for-R.html) and related [slides/code](https://github.com/rstudio/webinars/tree/master/2014-01): mostly conceptual, with a bit of code
+
+-   [dplyr tutorial by Hadley Wickham](https://www.dropbox.com/sh/i8qnluwmuieicxc/AAAgt9tIKoIm7WZKIyK25lh6a) at the [useR! 2014 conference](http://user2014.stat.ucla.edu/): excellent, in-depth tutorial with lots of example code (Dropbox link includes slides, code files, and data files)
+
+-   [dplyr GitHub repo](https://github.com/hadley/dplyr) and [list of releases](https://github.com/hadley/dplyr/releases)
