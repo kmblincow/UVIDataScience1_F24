@@ -147,6 +147,55 @@
     "text": "Concluding remarks\nObviously, I intentionally used simplified questions, as we are just starting to get our feet wet in terms of coding in R, but these types of analyses actually go on behind the scenes for most sports teams.\nThere are much more complicated questions we could ask and analyses we could perform with these data as well. We stuck with questions directly related to the variables present, but we can also take these data another step using data manipulation and analysis tools. Even though the active court lineup is not provided, we could deduce which players were on the court at certain times and ask something like which lineup led to the most points scored? Or which lineup led to the most missed shots by the other team? We could also try predicting outcomes using these data. What is the probability of the Lakers winning a game given the number of minutes Kobe Bryant plays in the first half? How about given the number of consecutive away games they’ve played?\nWhat is another more complex question you could answer using these data?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nAs we move through this semester, we will try to build your coding skills so that you can start trying to address these types of more complex data science questions on your own. We might even revisit this data set later in the semester to see if we can implement the tools you’ve learned to ask more complex questions."
   },
   {
+    "objectID": "Week1R4DS.html",
+    "href": "Week1R4DS.html",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.\nFor this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.\nA couple vocabulary words:\n\ncode chunk: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run\nWebR code chunk: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section\n\n\n\nThese are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCan you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Week1R4DS.html#coding-basics",
+    "href": "Week1R4DS.html#coding-basics",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "These are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Week1R4DS.html#comments",
+    "href": "Week1R4DS.html#comments",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Week1R4DS.html#whats-in-a-name",
+    "href": "Week1R4DS.html#whats-in-a-name",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Can you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Week1R4DS.html#calling-functions",
+    "href": "Week1R4DS.html#calling-functions",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "Week1R4DS.html#exercises",
+    "href": "Week1R4DS.html#exercises",
+    "title": "Week 1 Homework: R4DS Exercises",
+    "section": "",
+    "text": "Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Course Description\nDATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\nPrerequisites: MAT 140 or MAT 143.\n\nContact\nKayla Blincow: kayla.israel@uvi.edu"
+  },
+  {
     "objectID": "DSWksp1.html",
     "href": "DSWksp1.html",
     "title": "URISE Workshop: Data Visualization",
@@ -203,53 +252,81 @@
     "text": "FINAL EXERCISE: Your turn!\nCreate three visualizations addressing the following research questions:\n\nDoes the incidence of scurvy seem to be related to height?\nDoes the incidence of scurvy seem to be related to age?\nWhich ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)\n\nResearch Question: Does the incidence of scurvy seem to be related to height?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nResearch Question: Does the incidence of scurvy seem to be related to age?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nResearch Question: Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nQuestions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow@gmail.com."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "DSWksp2.html",
+    "href": "DSWksp2.html",
+    "title": "URISE Workshop: Data Wrangling",
     "section": "",
-    "text": "Course Description\nDATA SCIENCE I. Data Science I provides students with an introduction to the concepts and basic skills needed to understand the role of data in today’s world. The course explores the emergence of the field using the data science workflow as the unifying framework to illustrate the importance of each stage of the workflow, how it contributes to the final report, and how that new information is used. Topics include applications of data science; data ethics; data preparation; data stewardship; analysis, evaluation, communicating results, and best practices. The trade-offs among tools, algorithms, and visualizations are discussed using both effective and ineffective examples. This is a hands-on course, students work with datasets in a peer-peer and near-peer groups.\nPrerequisites: MAT 140 or MAT 143.\n\nContact\nKayla Blincow: kayla.israel@uvi.edu"
+    "text": "In this tutorial, we will introduce some of the basic tools used in data wrangling.\nMake sure to click “Run Code” in the interactive code chunks.\nNOTE: YOU CAN RUN JUST A PORTION OF ANY CODE CHUNK BY HIGHLIGHTING IT AND USING THE FOLLOWING KEYBOARD SHORTCUTS: PCS - (ctrl + Enter); MACs - (cmd + Enter)."
   },
   {
-    "objectID": "Week1R4DS.html",
-    "href": "Week1R4DS.html",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.\nFor this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.\nA couple vocabulary words:\n\ncode chunk: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run\nWebR code chunk: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section\n\n\n\nThese are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nCan you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nTry the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#before-we-get-started-some-r-basics.",
+    "href": "DSWksp2.html#before-we-get-started-some-r-basics.",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "Before we get started, some R basics.",
+    "text": "Before we get started, some R basics.\nUp until now, we have been focusing on gaining enough R coding skills to be able to demonstrate the insights that can be gained from data chiefly through data visualization. Now, we are transitioning into topics that will require a stronger understanding of certain R functions.\nLet’s start by reviewing how we create objects in our R environment:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nEven though we are moving to a different code chunk, thing1 and thing2 still exist in our coding environment. That means we can continue to use them.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIt is a good idea to store values as objects if you think you are going to need them in the future.\nR is made up of packages and functions, which make it easier for us all to do commonly needed actions. This is a double edged sword. Pre-made functions make it quicker to get some things done, but you don’t necessarily know that the code that is behind the function is doing what you think it’s doing.\nHere are a few examples of functions you might need:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nCalculating basic summary statistics:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nRandomly sampling values from a normal distribution:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNavigating matrices and dataframes:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "Week1R4DS.html#coding-basics",
-    "href": "Week1R4DS.html#coding-basics",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "These are examples of code chunks:\n\n1/200 * 30\n\n[1] 0.15\n\n(59 + 73 + 2) / 3\n\n[1] 44.66667\n\nsin(pi / 2)\n\n[1] 1\n\n\nNotice the output of the code is printed below the chunk, and you are not able to edit the chunk.\nHere is an example of a WebR code chunk:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIn this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.\nLet’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.\nFYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#data-wrangling-using-dplyr",
+    "href": "DSWksp2.html#data-wrangling-using-dplyr",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "Data Wrangling using dplyr",
+    "text": "Data Wrangling using dplyr\nNote: This tutorial is largely created by Kevin Markham–I added some exercises for students to work through.\n\ndplyr is a package from the Tidyverse that makes data wrangling much more intuitive and fun!\n\nWhy even use dplyr?\n\nGreat for data exploration and transformation\nIntuitive to write and easy to read, especially when using the “chaining” syntax (covered below)\nFast on data frames\n\n\n\ndplyr functionality\n\nFive basic verbs: filter, select, arrange, mutate, summarise (plus group_by)\nCan work with data stored in databases and data tables\nJoins: inner join, left join, semi-join, anti-join (not covered below)\nWindow functions for calculating ranking, offsets, and more"
   },
   {
-    "objectID": "Week1R4DS.html#comments",
-    "href": "Week1R4DS.html#comments",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "Try adding a comment in the WebR code chunk below and running it to see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#our-example-data-set",
+    "href": "DSWksp2.html#our-example-data-set",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "Our example data set",
+    "text": "Our example data set\n\ndplyr will mask a few base functions (namely: filter())\nhflights is flights departing from two Houston airports in 2011\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nas_tibble creates a special tidyverse dataframe called a tibble\ntibbles have a number of features, but one of them is that they print more nicely in this type of tutorial environment\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nUse glimpse() to get a summary output of all the columns:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "Week1R4DS.html#whats-in-a-name",
-    "href": "Week1R4DS.html#whats-in-a-name",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "Can you edit the names of the objects and add comments below to make the code more effective?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#dplyrfilter-keep-rows-matching-criteria",
+    "href": "DSWksp2.html#dplyrfilter-keep-rows-matching-criteria",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "dplyr::filter: Keep rows matching criteria",
+    "text": "dplyr::filter: Keep rows matching criteria\n\nBase R approach to filtering forces you to repeat the data frame’s name\ndplyr approach is simpler to write and read\nCommand structure (for all dplyr verbs):\n\nfirst argument is a data frame\nreturn value is a data frame\nnothing is modified in place\n\nNote: dplyr generally does not preserve row names\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can use the “|” for the OR condition:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can also use the %in% operator to select for specific values in a column:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try.. How would we code it if we wanted to view all flights United Airlines or American Airlines flights that departed after 2PM?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "Week1R4DS.html#calling-functions",
-    "href": "Week1R4DS.html#calling-functions",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "Try exploring the sample() function in the WebR code chunk below.\nPro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#dplyrselect-pick-columns-by-name",
+    "href": "DSWksp2.html#dplyrselect-pick-columns-by-name",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "dplyr::select: Pick columns by name",
+    "text": "dplyr::select: Pick columns by name\n\nBase R approach is awkward to type and to read\ndplyr approach uses similar syntax to filter\nLike a SELECT in SQL\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can use the colon (:) to select multiple contiguous columns, and use ‘contains’ to match columns by name.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote: we can also use ‘starts_with’, ‘ends_with’, and ‘matches’ (for regular expressions) to match columns by name.\nNow you try: Select all of the columns that contain information about the date and time of the flight, as well as those that contain information about the flight’s cancellation.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
-    "objectID": "Week1R4DS.html#exercises",
-    "href": "Week1R4DS.html#exercises",
-    "title": "Week 1 Homework: R4DS Exercises",
-    "section": "",
-    "text": "Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.\n\nWhy does this code not work?\nEdit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nTweak each of the following R commands so that they run correctly:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe will skip this one since it’s specific to RStudio.\nLook at the following lines of code. Which of the two plots is saved as mpg-plot.png? Why?\nWrite your response as a comment in the WebR code chunk.\n\nmy_bar_plot &lt;- ggplot(mpg, aes(x = class)) +\n  geom_bar()\nmy_scatter_plot &lt;- ggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()\nggsave(filename = \"mpg-plot.png\", plot = my_bar_plot)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "objectID": "DSWksp2.html#chaining-or-pipelining",
+    "href": "DSWksp2.html#chaining-or-pipelining",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "“Chaining” or “Pipelining”",
+    "text": "“Chaining” or “Pipelining”\n\nUsual way to perform multiple operations in one line is by nesting\nCan write commands in a natural order by using the %&gt;% infix operator (which can be thought of as “and then”)\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nChaining increases readability significantly when there are many commands\nOperator is automatically imported from the magrittr package\nCan be used to replace nesting in R commands outside of dplyr\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try: Using the chaining method select the columns indicating the flight carrier, flight number, and departure time, and filter so I see only United Airlines flights that left after 2PM.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp2.html#dplyrarrange-reorder-rows",
+    "href": "DSWksp2.html#dplyrarrange-reorder-rows",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "dplyr::arrange: Reorder rows",
+    "text": "dplyr::arrange: Reorder rows\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nUse desc() to display things in descending order:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try: Using piping select all American Airlines flights that left in the afternoon on January 1, and arrange them based on departure times.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp2.html#dplyrmutate-add-new-variables",
+    "href": "DSWksp2.html#dplyrmutate-add-new-variables",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "dplyr::mutate: Add new variables",
+    "text": "dplyr::mutate: Add new variables\n\nCreate new variables that are functions of existing variables\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNote that the above code just printed our manipulations, but didn’t store them. To store them, we need to use the assignment arrow, as seen in the code chunk below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try: Calculate the total delay of each flight based on the Departure delay and Arrival delay, and store the resulting value.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp2.html#dplyrsummarise-reduce-variables-to-values",
+    "href": "DSWksp2.html#dplyrsummarise-reduce-variables-to-values",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "dplyr::summarise: Reduce variables to values",
+    "text": "dplyr::summarise: Reduce variables to values\n\nPrimarily useful with data that has been grouped by one or more variables\ngroup_by creates the groups that will be operated on\nsummarise uses the provided aggregation function to summarise each group\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow you try: Calculate the mean delay in arrival times for each month of the year.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nHelper function n() counts the number of rows in a group\nHelper function n_distinct(vector) counts the number of unique items in that vector\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nGrouping can sometimes be useful without summarising\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp2.html#resources",
+    "href": "DSWksp2.html#resources",
+    "title": "URISE Workshop: Data Wrangling",
+    "section": "Resources",
+    "text": "Resources\n\nOfficial dplyr reference manual and vignettes on CRAN: vignettes are well-written and cover many aspects of dplyr\nJuly 2014 webinar about dplyr (and ggvis) by Hadley Wickham and related slides/code: mostly conceptual, with a bit of code\ndplyr tutorial by Hadley Wickham at the useR! 2014 conference: excellent, in-depth tutorial with lots of example code (Dropbox link includes slides, code files, and data files)\ndplyr GitHub repo and list of releases"
   },
   {
     "objectID": "Week4HW.html",
