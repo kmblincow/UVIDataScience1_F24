@@ -271,7 +271,7 @@ TAKE A SCREENSHOT OF THE CODE/RESULTING PLOT AND PUT IT IN YOUR HW DOCUMENT.
 
 ```
 
-## **Citations And Helpful Links**
+## Citations and Helpful Links
 
 This lab was created by Dr. Kayla Blincow for the University of the Virgin Islands Data Science program using ideas, information, and inspiration from the following sources:
 
