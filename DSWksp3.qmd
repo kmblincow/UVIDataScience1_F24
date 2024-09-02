@@ -234,7 +234,7 @@ ggplot(lda_plot, aes(LD1, LD2)) +
 
 The darker triangles show us the predicted severity of outbreaks for the unknown towns, and where they fall in this two-dimensional depiction of all of our variables compared to the known towns.
 
-## Step 6: Check our model 
+## Step 6: Check our model
 
 As the flu season progresses, we monitor the unknown towns to see if they have H1N1 outbreaks and then record the severity of the outbreak once it occurs. By collecting these data and getting the "true" answer, we can check to see how accurate our model was a predicting the severity of outbreaks.
 
