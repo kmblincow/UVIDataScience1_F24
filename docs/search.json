@@ -453,5 +453,131 @@
     "title": "URISE Workshop: Data Wrangling",
     "section": "Resources",
     "text": "Resources\n\nOfficial dplyr reference manual and vignettes on CRAN: vignettes are well-written and cover many aspects of dplyr\nJuly 2014 webinar about dplyr (and ggvis) by Hadley Wickham and related slides/code: mostly conceptual, with a bit of code\ndplyr tutorial by Hadley Wickham at the useR! 2014 conference: excellent, in-depth tutorial with lots of example code (Dropbox link includes slides, code files, and data files)\ndplyr GitHub repo and list of releases"
+  },
+  {
+    "objectID": "DSWksp3.html",
+    "href": "DSWksp3.html",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "",
+    "text": "In this tutorial, we will be walking through how to use Linear Discriminant Analysis to predict whether towns are at high risk of an outbreak of swine flu (H1N1). NOTE: These are not real data on H1N1.\nMake sure to click “Run Code” in all the interactive code chunks to make sure this tutorial will work.\nSome early set up for our data (aka data manipulation steps). Don’t worry about this code, just run the chunk."
+  },
+  {
+    "objectID": "DSWksp3.html#why-is-data-visualization-important",
+    "href": "DSWksp3.html#why-is-data-visualization-important",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Why is data visualization important?",
+    "text": "Why is data visualization important?\nWhen we consider the data science workflow (Fig. 1), there is not a step that explicitly says “data visualization”. This is because data visualization is so essential that it occurs throughout the entire process!\n\nFigure 1. Data science life cycle. (Drawn by Chanin Nantasenamat in collaboration with Ken Jee; Source Article)\nAt its core, data visualization is used to simplify complex data. Data scientists often work with very large data sets (think millions of rows) and it is exceedingly difficult to conceptualize those data when interacting with them in table form. Using data visualization techniques, data scientists are able to:\n\nidentify (sometimes unexpected) patterns and trends in data\nidentify errors or weirdnesses in data\nestablish expectations for relationships in data to inform understanding of analysis results\ncommunicate the results of their efforts to others\n\nYour first step is ALWAYS to visualize your data!"
+  },
+  {
+    "objectID": "DSWksp3.html#data-visualization-in-r",
+    "href": "DSWksp3.html#data-visualization-in-r",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Data visualization in R",
+    "text": "Data visualization in R\nThere are a number of different tools that can aid in visualizing data in the R environment. Below is a selection of some of the tools available.\n\nggplot2: A powerful and flexible plotting package based on the grammar of graphics, allowing for the creation of complex multi-layered plots with consistent syntax.\nbase R: The default plotting system in R, offering simple and straightforward functions for plotting with basic customization options. (I often use base R plots for quick exploratory visualizations).\nplotly: An interactive graphing package that builds on ggplot2, allowing users to create dynamic, web-based interactive visualizations. For example, you can have a plot display a written value when hovering over a data point.\nshiny: A web application framework for R that allows users to create interactive web apps with reactive elements, including dynamic and responsive plots. This is a common tool for creating interactive data dashboards in R.\n\nYou are encouraged to explore these tools and others, but for the purposes of this lab, we will be focusing on ggplot2. You can find additional information on the ggplot2 package here."
+  },
+  {
+    "objectID": "DSWksp3.html#our-data-set-james-linds-scurvy-study",
+    "href": "DSWksp3.html#our-data-set-james-linds-scurvy-study",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Our data set: James Lind’s scurvy study",
+    "text": "Our data set: James Lind’s scurvy study\nScurvy was a common affliction among sailors in the 1700s. James Lind’s scurvy data set includes information on the severity of symptoms of twelve scurvy patients after being treated with one of the following remedies: cider, dilute sulfuric acide, sea water, vinegar, citrus, and purgative mixture. These data are included in the medicaldata package in R and were originally published in James Lind’s A Treatise on the Scurvy in Three Parts in 1757.\n\nArrrr, Ye Got Scurvy Mate?\n \nRun the code chunk below to load the data and take a quick look at it.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can see the data includes information on the patient id (study_id), treatment, dosing regimen, severity of symptoms, and whether the sailors were fit for duty after treatment.\nHowever, looking at the data this way, we can’t really discern patterns that might exist. For example, which treatment seemed to reduce the severity of symptoms? Which treatment was associated with the lowest severity of gum rot overall?\nBy visualizing the data we can find answers to these questions and more!"
+  },
+  {
+    "objectID": "DSWksp3.html#lets-visualize-some-data",
+    "href": "DSWksp3.html#lets-visualize-some-data",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Let’s visualize some data!",
+    "text": "Let’s visualize some data!\nIn this section we will demonstrate how to make a visualization using ggplot2.\nFor this first example, each line of code includes a comment (denoted by #) that describes what that line is doing. In general, it’s good practice to go line by line in code you receive to ensure you fully understand what it’s doing.\nIn the exercise code chunks, you will be required to fill in the missing code (denoted by #FILLMEIN) to create the visualization.\n\nDemonstration:\nWe are going to start by making a plot that will show us the number of patients associated with each level of symptom severity for gum rot colored by treatment type. Spend some time looking at the code and consider what you think the resulting plot will look like before running the chunk below.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDoes the resulting plot match what you expected the code to generate?\nEXERCISE 1:\nAdjust the code chunk below to create a plot that will show us the number of patients associated with each level of symptom severity for skin sores colored by treatment type.\n(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don’t forget about commas!)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nANALYSIS INTERLUDE:\nBased on your plots, were there more patients with sever gum rot or skin sores? Which treatment do you think is the best so far?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp3.html#asking-more-scurvy-questions",
+    "href": "DSWksp3.html#asking-more-scurvy-questions",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Asking more scurvy questions",
+    "text": "Asking more scurvy questions\nRun the code chunks in this section to see how visualizations can help us get answers to research questions related to the scurvy data set.\nResearch Question: Which symptom had the most severe cases?\nTo answer this question it will help us if our data is in long format. This will allow us to have a single column for symptom, rather than each symptom having it’s own column. Take a look at the output from the code chunk below and notice the changes to the data set.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nYou can see now all our symptom columns have been collapsed into a single column “symptom”. This also means that our study_id, treatment, and dosing_regimen_for_scurvy columns have repeated rows for each unique symptom value.\nHaving the data formatted this way makes it easier to make visualizations comparing symptoms.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBased on this figure, we can see that lassitude had the highest number of severe cases, followed by skin sores and weakness of the knees.\nEXERCISE 2:\nAdjust the code chunk below to create a plot that will show us which treatment type seemed to perform the best for reducing severity of scurvy symptoms.\n(HINT: You might want to refer back to your column names to ensure you are inputting the right variable names, and don’t forget about commas!)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWhich treatment works best for treating scurvy?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "DSWksp3.html#adding-continuous-variables",
+    "href": "DSWksp3.html#adding-continuous-variables",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Adding continuous variables",
+    "text": "Adding continuous variables\nThe data set we have been working with thus far have consisted solely of categorical data (e.g. Severity (none, mile, moderate, severe). This means that we are limited to looking at the number of observations in each category, chiefly with bar plots. Numerical or continuous data consists of continuous number values and opens up new possibilities for data visualization.\nWe are going to use a made up data set to explore how we visualize continuous data. These data will consist of observations of incidences of scurvy among ship crews. They will include data on the weight, height, and age of each sailor, whether they contracted scurvy or not, which ship they sailed on, and the year the ship was active.\nRun the code chunk below to generate the new data set (don’t worry if you don’t follow what the code is doing, we just need the data).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNow that we have the data you can take a quick look at it\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice that weight, height, and age are all numeric values. Also scurvy incidence is coded as N for no scurvy or Y for yes scurvy.\nResearch Question: How does the weight of sailors differ across ships?\nWe can use a box plot or violin plot to look for differences in a continuous variable (weight) across categorical variables (ship).\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nBoth of these plots show us that the Sea Serpent had the heaviest sailors.\n\nResearch Question: What is the relationship between height and weight?\nWe can use a scatterplot to look at the relationship of two continuous variables against each other.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nUnsurprisingly, we see that weight generally increases with height.\nResearch Question: Does the relationship between height and weight differ across ships?\nWe can use color to show whether continuous relationships differ across a categorical variable.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nIt doesn’t look like there is much a difference in the trend between ships, but the Sea Serpent tends to have shorter sailors for a given weight value than the other ships."
+  },
+  {
+    "objectID": "DSWksp3.html#final-exercise-your-turn",
+    "href": "DSWksp3.html#final-exercise-your-turn",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "FINAL EXERCISE: Your turn!",
+    "text": "FINAL EXERCISE: Your turn!\nCreate three visualizations addressing the following research questions:\n\nDoes the incidence of scurvy seem to be related to height?\nDoes the incidence of scurvy seem to be related to age?\nWhich ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)\n\nResearch Question: Does the incidence of scurvy seem to be related to height?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nResearch Question: Does the incidence of scurvy seem to be related to age?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nResearch Question: Which ship had the highest incidence of scurvy? Can you think of an explanation for your answer? (HINT: think of when James Lind’s publication was released)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nQuestions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow@gmail.com."
+  },
+  {
+    "objectID": "DSWksp3.html#what-is-machine-learning-classification",
+    "href": "DSWksp3.html#what-is-machine-learning-classification",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "What is Machine Learning Classification?",
+    "text": "What is Machine Learning Classification?\nMachine learning, in terms of classification, refers to a type of supervised learning where the algorithm learns to categorize data into predefined classes or labels. The goal of a classification model is to predict the class or category of new, unseen data based on patterns learned from a labeled dataset during training.\nThis has valuable applications in many fields, including health fields where it is used to:\n\ngenerate personalized treatment plans\npredict side effects\nhave computers visually identify cancerous tumors\nidentify at-risk populations\npredict the spread of disease"
+  },
+  {
+    "objectID": "DSWksp3.html#linear-discriminant-analysis-lda",
+    "href": "DSWksp3.html#linear-discriminant-analysis-lda",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Linear Discriminant Analysis (LDA)",
+    "text": "Linear Discriminant Analysis (LDA)\nLinear Discriminant Analysis (LDA) is a popular technique used in machine learning for classification and dimensionality reduction when working with linearly separable variables. LDA is primarily used to classify data into groups by finding a linear combination of variables that best separates the groups. It projects the data onto a lower-dimensional space where separation between classes is maximized."
+  },
+  {
+    "objectID": "DSWksp3.html#our-scenario-h1n1-swine-flu",
+    "href": "DSWksp3.html#our-scenario-h1n1-swine-flu",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Our scenario: H1N1 Swine Flu",
+    "text": "Our scenario: H1N1 Swine Flu\nSwine influenza is a respiratory disease of pigs cause by type A influenza viruses. In the 2009-10 flu season, a new H1N1 virus began causing illness in humans. It resulted in a pandemic that caused an estimate 284,400 deaths worldwide.\n\nFigure 1. Symptoms of Swine Flu (Wikipedia)\n2024-2025 Season Outbreak\nFor the purposes of this exercise, we are going to imagine that the 2024-2025 flu season has also seen an outbreak of H1N1 that can infect humans. Epidemiologists would like to notify towns that are at risk of experiencing severe outbreaks to be extra cautious, but first they need to identify which towns are at high risk. They have gathered a data set of towns that have already been experienced outbreaks (H1N1_known). The data set includes a measure of the severity level of the outbreak (high, mid, or low) and a number of variables that likely influence severity of outbreak.\nThe variables they measured are:\n\nVaccination_Availability: this is a scaled measure of the availability of flu vaccinations in each town. Generally, towns with lower availability of vaccinations will be at higher risk of flu outbreaks.\nTravel_Metric: this is a scaled measure of the amount of travel in and out of the town. Generally, towns that have a lot of folks coming and going are more likely to get exposed to new viruses.\nDist_Nearest_Outbreak: this is a scaled measure of how far the town is from the nearest outbreak of H1N1. Towns in closer proximity to other towns that have already had an outbreak are generally at higher risk of experiencing an outbreak.\nMedical_Awareness_Metric: this is a scaled measure of the culture around medical awareness and safety in the town. Generally towns with a higher value of this metric will be more aware of common flu avoidance measures, such as frequent hand washing, vaccination, etc."
+  },
+  {
+    "objectID": "DSWksp3.html#step-1-take-a-look-at-our-data",
+    "href": "DSWksp3.html#step-1-take-a-look-at-our-data",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 1: Take a look at our data",
+    "text": "Step 1: Take a look at our data\nRun the code chunk below to take a quick look at our data of known town risks:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nRun the code chunk below to print a few plots of our known data (NOTE: the final line of this code works because of my favorite package - patchwork - it’s amazing for making multi-panel plots):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can see some basic trends in the data, but it would be hard to classify new towns based on looking at any of these metrics in isolation. They all have some overlap. Using LDA, we might be able to classify towns using all of the variables combined and do a better job predicting which ones are at high risk of a severe outbreak."
+  },
+  {
+    "objectID": "DSWksp3.html#step-2-run-the-lda",
+    "href": "DSWksp3.html#step-2-run-the-lda",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 2: Run the LDA",
+    "text": "Step 2: Run the LDA\nWe will use the lda() function in the MASS package to fit the LDA model to our known data (or training data):\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nHere is how to interpret the output of the model:\nPrior probabilities of group: These represent the proportions of each Risk group in the training set. For example, 30.8% of all towns in the training set had high severity outbreaks.\nGroup means: These display the mean values for each predictor variable for each severity level.\nCoefficients of linear discriminants: These display the linear combination of predictor variables that are used to form the decision rule of the LDA model. For example:\n\nLD1: - 0.609*Vaccination_Availability - 0.627*Travel_Metric + 3.560*Dist_Nearest_Outbreak + 2.144*Medical_Awareness_Metric\nLD2: .743*Vaccination_Availability + .754*Travel_Metric – 3.223*Dist_Nearest_Outbreak + 2.944*Medical_Awareness_Metric\n\nProportion of trace: These display the percentage separation achieved by each linear discriminant function."
+  },
+  {
+    "objectID": "DSWksp3.html#step-3-plot-training-data-lda",
+    "href": "DSWksp3.html#step-3-plot-training-data-lda",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 3: Plot training data LDA",
+    "text": "Step 3: Plot training data LDA\nThe code below generates a two-dimensional plot with our linear discriminants as the x and y axes. This is essentially a two-dimensional representation of our four-dimensional data (four predictor variables) that shows how the LDA clustered our observations of towns based on the severity of H1N1 outbreaks.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nWe can see from this plot that the high severity outbreak towns separate distinctly from the low and mid-level severity outbreak towns. This suggests that we are probably going to do a pretty good job predicting high severity outbreak areas, but might have a harder time distinguishing between low and mid-level severity areas.\nLet’s see what happens when we try to predict which the level of severity of outbreaks expected for new towns…"
+  },
+  {
+    "objectID": "DSWksp3.html#step-4-use-the-lda-model-to-make-predictions",
+    "href": "DSWksp3.html#step-4-use-the-lda-model-to-make-predictions",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 4: Use the LDA model to make predictions",
+    "text": "Step 4: Use the LDA model to make predictions\nIn addition to our known data set, we also have a data set of towns that have not yet experienced an outbreak (H1N1_unknown). We would like to predict the severity of a potential H1N1 outbreak in these unknown towns based on our predictor variables: availability of vaccines, travel metric, distance to the nearest outbreak, and medical awareness metric.\nWe use the predict() function to do this. NOTE: This is a really handy function. It basically allows you to use (almost) any statistical model and predict across new values.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThis returns a list with three variables:\n\nclass: The predicted severity group\nposterior: The posterior probability that an observation belongs to each severity group\nx: The linear discriminants\n\nWe can quickly view each of these results for the first six observations in our test dataset:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSo we have used our LDA to make predictions. The above functions are useful, but this is a case where it is easier to understand what happened by using a visualization."
+  },
+  {
+    "objectID": "DSWksp3.html#step-5-visualize-the-results",
+    "href": "DSWksp3.html#step-5-visualize-the-results",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 5: Visualize the results",
+    "text": "Step 5: Visualize the results\nLet’s plot our LDA again, but this time let’s see where our new unknown towns landed compared to the towns we did know.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nThe darker triangles show us the predicted severity of outbreaks for the unknown towns, and where they fall in this two-dimensional depiction of all of our variables compared to the known towns."
+  },
+  {
+    "objectID": "DSWksp3.html#step-6-check-our-model",
+    "href": "DSWksp3.html#step-6-check-our-model",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "Step 6: Check our model",
+    "text": "Step 6: Check our model\nAs the flu season progresses, we monitor the unknown towns to see if they have H1N1 outbreaks and then record the severity of the outbreak once it occurs. By collecting these data and getting the “true” answer, we can check to see how accurate our model was a predicting the severity of outbreaks.\nWe actually already have this information stored in our H1N1_unknown data file, and we can test to see how accurate our model was using the code below:\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n93.5% of the time we accurately predicted the level of severity of an H1N1 outbreak for new towns. That’s pretty good!\nWhat are some things we could do to improve the accuracy of our model?\nHopefully you can see how this type of analysis might be useful in the real world for informing health science outcomes, but also many, many other fields."
+  },
+  {
+    "objectID": "DSWksp3.html#references",
+    "href": "DSWksp3.html#references",
+    "title": "URISE Workshop: Data Analysis",
+    "section": "References",
+    "text": "References\nMuch of this tutorial was pulled from: Linear Discriminant Analysis in R (Step-by-Step) (statology.org)\nQuestions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow@gmail.com."
   }
 ]
