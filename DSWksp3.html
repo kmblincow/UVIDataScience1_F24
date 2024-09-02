@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Week 1 Homework: R4DS Exercises – UVI Data Science 1</title>
+<title>URISE Workshop: Data Analysis – UVI Data Science 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -368,7 +334,7 @@ body.reveal.quarto-dark div.qwebr-console-area {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr'];
+globalThis.qwebrInstallRPackagesList = ['ggplot2', 'dplyr', 'tidyr', 'MASS', 'patchwork'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -390,7 +356,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-1"},"code":"x <- 3 * 4","id":1},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-2"},"code":"primes <- c(2, 3, 5, 7, 11, 13)","id":2},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-3"},"code":"5000*900","id":3},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-4"},"code":"this_is_just_a_random_number_DrB_generated <- sample(1:100, 1)\nthis_is_just_a_random_number_DrB_generated\n\ngreen <- \"purple\"","id":4},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-5"},"code":"#sample draws random numbers from a provided vector\n#draw 15 values randomly from the range 1 to 50 with replacement\nsample(1:50, 15, replace =  TRUE)","id":5},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-6"},"code":"my_variable <- 10\nmy_varıable\n#REPLACE THIS COMMENT WITH YOUR WRITTEN ANSWER.","id":6},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-7"},"code":"libary(todyverse)\n\nggplot(dTA = mpg) + \n  geom_point(maping = aes(x = displ y = hwy)) ","id":7},{"options":{"autorun":"false","out-width":"700px","editor-word-wrap":"true","out-height":"","editor-quick-suggestions":"false","fig-height":5,"context":"interactive","comment":"","warning":"true","editor-max-height":"","message":"true","read-only":"false","fig-cap":"","results":"markup","editor-font-scale":"1","output":"true","fig-width":7,"dpi":72,"classes":"","label":"unnamed-chunk-8"},"code":"#WRITE YOUR RESPONSE HERE","id":8}];
+globalThis.qwebrCellDetails = [{"code":"H1N1 <- iris\n\ncolnames(H1N1) <- c(\"Vaccination_Availability\", \"Travel_Metric\",\n                 \"Dist_Nearest_Outbreak\", \"Medical_Awareness_Metric\", \n                 \"OutbreakLevel\")\n\nH1N1$OutbreakLevel <- as.character(H1N1$OutbreakLevel)\nH1N1[H1N1$OutbreakLevel == \"setosa\",]$OutbreakLevel <- \"High\"\nH1N1[H1N1$OutbreakLevel == \"versicolor\",]$OutbreakLevel <- \"Mid\"\nH1N1[H1N1$OutbreakLevel == \"virginica\",]$OutbreakLevel <- \"Low\"\n\nH1N1$OutbreakLevel <- factor(H1N1$OutbreakLevel, levels = c(\"Low\", \"Mid\", \"High\"))\n\n\nH1N1[1:4] <- scale(H1N1[1:4])\n\nset.seed(80085)\nsample <- sample(c(TRUE, FALSE), nrow(H1N1), replace = TRUE, prob = c(0.7, 0.3))\nH1N1_known <- H1N1[sample, ]\nH1N1_unknown <- H1N1[!sample, ]","id":1,"options":{"editor-font-scale":"1","label":"unnamed-chunk-1","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#take a look at a summary of our data\nglimpse(H1N1_known)","id":2,"options":{"editor-font-scale":"1","label":"unnamed-chunk-2","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#make a plot showing all variables across Outbreak Severity Levels\np1 <- ggplot(H1N1_known, aes(x = OutbreakLevel, y = Vaccination_Availability,\n                             color = OutbreakLevel, fill = OutbreakLevel)) +\n  geom_violin(alpha = 0.2) +\n  geom_jitter(width = 0.15, alpha = 0.5) +\n  theme_bw()\n\np2 <- ggplot(H1N1_known, aes(x = OutbreakLevel, y = Travel_Metric,\n                             color = OutbreakLevel, fill = OutbreakLevel)) +\n  geom_violin(alpha = 0.2) +\n  geom_jitter(width = 0.1, alpha = 0.5) +\n  theme_bw()\n\np3 <- ggplot(H1N1_known, aes(x = OutbreakLevel, y = Dist_Nearest_Outbreak,\n                             color = OutbreakLevel, fill = OutbreakLevel)) +\n  geom_violin(alpha = 0.2) +\n  geom_jitter(width = 0.1, alpha = 0.5) +\n  theme_bw()\n\np4 <- ggplot(H1N1_known, aes(x = OutbreakLevel, y = Medical_Awareness_Metric,\n                             color = OutbreakLevel, fill = OutbreakLevel)) +\n  geom_violin(alpha = 0.2) +\n  geom_jitter(width = 0.1, alpha = 0.5) +\n  theme_bw()\n\np1 + p2 + p3 + p4 + plot_layout(guides = \"collect\")","id":3,"options":{"editor-font-scale":"1","label":"unnamed-chunk-3","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#fit the model\nriskmodel <- lda(OutbreakLevel~Vaccination_Availability + \n                   Travel_Metric + Dist_Nearest_Outbreak +\n                   Medical_Awareness_Metric, data = H1N1_known)\n\n#view model output\nriskmodel","id":4,"options":{"editor-font-scale":"1","label":"unnamed-chunk-4","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#add our LD axes to our data\nlda_plot_train <- cbind(H1N1_known, predict(riskmodel)$x)\n\nggplot(lda_plot_train, aes(x =LD1, LD2, color = OutbreakLevel)) +\n  geom_point() +\n  theme_bw()","id":5,"options":{"editor-font-scale":"1","label":"unnamed-chunk-5","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#use LDA model to make predictions on new data\npredicted <- predict(riskmodel, H1N1_unknown)\n\n#look at the column names of our predicted output\nnames(predicted)","id":6,"options":{"editor-font-scale":"1","label":"unnamed-chunk-6","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#view predicted grouping for first six observations in unknown data\nhead(predicted$class)","id":7,"options":{"editor-font-scale":"1","label":"unnamed-chunk-7","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#view posterior probabilities for first six observations in unknown data\nhead(predicted$posterior)\n\n#View posterior probabilities for last six observations in unknown data (low level)\ntail(predicted$posterior)","id":8,"options":{"editor-font-scale":"1","label":"unnamed-chunk-8","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#view linear discriminants for first six observations in unknown data\nhead(predicted$x)","id":9,"options":{"editor-font-scale":"1","label":"unnamed-chunk-9","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#create a new column called \"datatype\" in both known and unknown data sets\nH1N1_known$datatype <- \"Known\"\nH1N1_unknown$datatype <- \"Unknown\"\n\n#Create plotting data (need to add LDs to the data)\nlda_plot_train <- cbind(H1N1_known, predict(riskmodel)$x)\nlda_plot_test <- cbind(H1N1_unknown, predicted$x)\n\n#combine our data sets into a single data set\nlda_plot <- rbind(lda_plot_train, lda_plot_test)\n\n#make the plot\nggplot(lda_plot, aes(LD1, LD2)) +\n  geom_point(aes(color = OutbreakLevel, shape = datatype, alpha = datatype,\n                 size = datatype)) +\n  scale_alpha_manual(values = c(0.5,1)) +\n  scale_size_manual(values = c(1.5, 2)) +\n  theme_bw()","id":10,"options":{"editor-font-scale":"1","label":"unnamed-chunk-10","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}},{"code":"#check the accuracy of our model\nmean(predicted$class == H1N1_unknown$OutbreakLevel)","id":11,"options":{"editor-font-scale":"1","label":"unnamed-chunk-11","editor-word-wrap":"true","comment":"","fig-width":7,"fig-height":5,"message":"true","editor-quick-suggestions":"false","warning":"true","read-only":"false","fig-cap":"","classes":"","dpi":72,"autorun":"false","output":"true","results":"markup","context":"interactive","out-height":"","out-width":"700px","editor-max-height":""}}];
 
 </script>
 <script type="module">
@@ -1640,14 +1606,16 @@ globalThis.qwebrExecuteCode = async function (
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lets-try-coding" id="toc-lets-try-coding" class="nav-link active" data-scroll-target="#lets-try-coding">Let’s Try Coding!</a>
-  <ul class="collapse">
-  <li><a href="#coding-basics" id="toc-coding-basics" class="nav-link" data-scroll-target="#coding-basics">2.1 Coding Basics</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">2.2 Comments</a></li>
-  <li><a href="#whats-in-a-name" id="toc-whats-in-a-name" class="nav-link" data-scroll-target="#whats-in-a-name">2.3 What’s in a name?</a></li>
-  <li><a href="#calling-functions" id="toc-calling-functions" class="nav-link" data-scroll-target="#calling-functions">2.4 Calling Functions</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">2.5 Exercises</a></li>
-  </ul></li>
+  <li><a href="#what-is-machine-learning-classification" id="toc-what-is-machine-learning-classification" class="nav-link active" data-scroll-target="#what-is-machine-learning-classification">What is Machine Learning Classification?</a></li>
+  <li><a href="#linear-discriminant-analysis-lda" id="toc-linear-discriminant-analysis-lda" class="nav-link" data-scroll-target="#linear-discriminant-analysis-lda">Linear Discriminant Analysis (LDA)</a></li>
+  <li><a href="#our-scenario-h1n1-swine-flu" id="toc-our-scenario-h1n1-swine-flu" class="nav-link" data-scroll-target="#our-scenario-h1n1-swine-flu">Our scenario: H1N1 Swine Flu</a></li>
+  <li><a href="#step-1-take-a-look-at-our-data" id="toc-step-1-take-a-look-at-our-data" class="nav-link" data-scroll-target="#step-1-take-a-look-at-our-data">Step 1: Take a look at our data</a></li>
+  <li><a href="#step-2-run-the-lda" id="toc-step-2-run-the-lda" class="nav-link" data-scroll-target="#step-2-run-the-lda">Step 2: Run the LDA</a></li>
+  <li><a href="#step-3-plot-training-data-lda" id="toc-step-3-plot-training-data-lda" class="nav-link" data-scroll-target="#step-3-plot-training-data-lda">Step 3: Plot training data LDA</a></li>
+  <li><a href="#step-4-use-the-lda-model-to-make-predictions" id="toc-step-4-use-the-lda-model-to-make-predictions" class="nav-link" data-scroll-target="#step-4-use-the-lda-model-to-make-predictions">Step 4: Use the LDA model to make predictions</a></li>
+  <li><a href="#step-5-visualize-the-results" id="toc-step-5-visualize-the-results" class="nav-link" data-scroll-target="#step-5-visualize-the-results">Step 5: Visualize the results</a></li>
+  <li><a href="#step-6-check-our-model" id="toc-step-6-check-our-model" class="nav-link" data-scroll-target="#step-6-check-our-model">Step 6: Check our model</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -1940,7 +1908,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 1 Homework: R4DS Exercises</h1>
+<h1 class="title">URISE Workshop: Data Analysis</h1>
 </div>
 
 
@@ -1957,88 +1925,119 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="lets-try-coding" class="level1">
-<h1>Let’s Try Coding!</h1>
-<p>In this course, you will not have to download R or RStudio, which are software tools used to implement the R coding language. Since our focus is not for you to become expert coders, but rather to expose you to the data science work flow, we are going to do all your coding in interactive tutorials like this one.</p>
-<p>For this first experience, I just want you to get used to the format. This tutorial directly mirrors the R for Data Science textbook “Whole Game &gt; 2 Workflow:basics” chapter that you were assigned to read this week. As you’re reading, use this page to run the code that appears in the chapter.</p>
-<p>A couple vocabulary words:</p>
-<ul>
-<li><p><strong>code chunk</strong>: these are sections in your tutorials that contain code that is for you to view and investigate, but not necessarily run</p></li>
-<li><p><strong>WebR code chunk</strong>: these are sections in your tutorials that contain an interactive code chunk that allows you to edit and run the code in the section</p></li>
-</ul>
-<section id="coding-basics" class="level2">
-<h2 class="anchored" data-anchor-id="coding-basics">2.1 Coding Basics</h2>
-<p>These are examples of code chunks:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">/</span><span class="dv">200</span> <span class="sc">*</span> <span class="dv">30</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.15</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">59</span> <span class="sc">+</span> <span class="dv">73</span> <span class="sc">+</span> <span class="dv">2</span>) <span class="sc">/</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 44.66667</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(pi <span class="sc">/</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1</code></pre>
-</div>
-</div>
-<p>Notice the output of the code is printed below the chunk, and you are not able to edit the chunk.</p>
-<p>Here is an example of a WebR code chunk:</p>
+<p>In this tutorial, we will be walking through how to use Linear Discriminant Analysis to predict whether towns are at high risk of an outbreak of swine flu (H1N1). NOTE: These are not real data on H1N1.</p>
+<p>Make sure to click “Run Code” in all the interactive code chunks to make sure this tutorial will work.</p>
+<p>Some early set up for our data (aka data manipulation steps). Don’t worry about this code, just run the chunk.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In this type of code chunk, you can click in the chunk and edit what is written there. You might have noticed, nothing gets printed when you click “Run Code”. Try writing “x” on the next line and running the code to see what happens.</p>
-<p>Let’s try another example. In the code chunk below, add the code from the text that demonstrates basic arithmetic on vectors. Click “Run Code” and see if you get the same result.</p>
-<p><em>FYI: vectors are a type of data structure that holds elements of the same type–the primes object we create below is a vector of numeric values.</em></p>
+<section id="what-is-machine-learning-classification" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-machine-learning-classification">What is Machine Learning Classification?</h2>
+<p>Machine learning, in terms of classification, refers to a type of supervised learning where the algorithm learns to categorize data into predefined classes or labels. The goal of a classification model is to predict the class or category of new, unseen data based on patterns learned from a labeled dataset during training.</p>
+<p>This has valuable applications in many fields, including health fields where it is used to:</p>
+<ul>
+<li>generate personalized treatment plans</li>
+<li>predict side effects</li>
+<li>have computers visually identify cancerous tumors</li>
+<li>identify at-risk populations</li>
+<li>predict the spread of disease</li>
+</ul>
+</section>
+<section id="linear-discriminant-analysis-lda" class="level2">
+<h2 class="anchored" data-anchor-id="linear-discriminant-analysis-lda">Linear Discriminant Analysis (LDA)</h2>
+<p>Linear Discriminant Analysis (LDA) is a popular technique used in machine learning for classification and dimensionality reduction when working with linearly separable variables. LDA is primarily used to classify data into groups by finding a linear combination of variables that best separates the groups. It projects the data onto a lower-dimensional space where separation between classes is maximized.</p>
+</section>
+<section id="our-scenario-h1n1-swine-flu" class="level2">
+<h2 class="anchored" data-anchor-id="our-scenario-h1n1-swine-flu">Our scenario: H1N1 Swine Flu</h2>
+<p>Swine influenza is a respiratory disease of pigs cause by type A influenza viruses. In the 2009-10 flu season, a new H1N1 virus began causing illness in humans. It resulted in a pandemic that caused an estimate 284,400 deaths worldwide.</p>
+<p><img src="images/clipboard-3381274812.png" class="img-fluid"></p>
+<p><em>Figure 1. Symptoms of Swine Flu (Wikipedia)</em></p>
+<p><strong>2024-2025 Season Outbreak</strong></p>
+<p>For the purposes of this exercise, we are going to imagine that the 2024-2025 flu season has also seen an outbreak of H1N1 that can infect humans. Epidemiologists would like to notify towns that are at risk of experiencing severe outbreaks to be extra cautious, but first they need to identify which towns are at high risk. They have gathered a data set of towns that have already been experienced outbreaks (H1N1_known). The data set includes a measure of the severity level of the outbreak (high, mid, or low) and a number of variables that likely influence severity of outbreak.</p>
+<p>The variables they measured are:</p>
+<ul>
+<li><p>Vaccination_Availability: this is a scaled measure of the availability of flu vaccinations in each town. Generally, towns with lower availability of vaccinations will be at higher risk of flu outbreaks.</p></li>
+<li><p>Travel_Metric: this is a scaled measure of the amount of travel in and out of the town. Generally, towns that have a lot of folks coming and going are more likely to get exposed to new viruses.</p></li>
+<li><p>Dist_Nearest_Outbreak: this is a scaled measure of how far the town is from the nearest outbreak of H1N1. Towns in closer proximity to other towns that have already had an outbreak are generally at higher risk of experiencing an outbreak.</p></li>
+<li><p>Medical_Awareness_Metric: this is a scaled measure of the culture around medical awareness and safety in the town. Generally towns with a higher value of this metric will be more aware of common flu avoidance measures, such as frequent hand washing, vaccination, etc.</p></li>
+</ul>
+</section>
+<section id="step-1-take-a-look-at-our-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-take-a-look-at-our-data">Step 1: Take a look at our data</h2>
+<p>Run the code chunk below to take a quick look at our data of known town risks:</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="comments" class="level2">
-<h2 class="anchored" data-anchor-id="comments">2.2 Comments</h2>
-<p>Try adding a comment in the WebR code chunk below and running it to see what happens.</p>
+<p>Run the code chunk below to print a few plots of our known data (NOTE: the final line of this code works because of my favorite package - patchwork - it’s amazing for making multi-panel plots):</p>
 <div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We can see some basic trends in the data, but it would be hard to classify new towns based on looking at any of these metrics in isolation. They all have some overlap. Using LDA, we might be able to classify towns using all of the variables combined and do a better job predicting which ones are at high risk of a severe outbreak.</p>
 </section>
-<section id="whats-in-a-name" class="level2">
-<h2 class="anchored" data-anchor-id="whats-in-a-name">2.3 What’s in a name?</h2>
-<p>Can you edit the names of the objects and add comments below to make the code more effective?</p>
+<section id="step-2-run-the-lda" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-run-the-lda">Step 2: Run the LDA</h2>
+<p>We will use the lda() function in the MASS package to fit the LDA model to our known data (or training data):</p>
 <div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Here is how to interpret the output of the model:</p>
+<p><strong>Prior probabilities of group:</strong> These represent the proportions of each Risk group in the training set. For example, 30.8% of all towns in the training set had high severity outbreaks.</p>
+<p><strong>Group means:</strong> These display the mean values for each predictor variable for each severity level.</p>
+<p><strong>Coefficients of linear discriminants:</strong> These display the linear combination of predictor variables that are used to form the decision rule of the LDA model. For example:</p>
+<ul>
+<li><p><strong>LD1:</strong> - 0.609*Vaccination_Availability - 0.627*Travel_Metric + 3.560*Dist_Nearest_Outbreak + 2.144*Medical_Awareness_Metric</p></li>
+<li><p><strong>LD2:</strong>&nbsp;.743*Vaccination_Availability + .754*Travel_Metric – 3.223*Dist_Nearest_Outbreak + 2.944*Medical_Awareness_Metric</p></li>
+</ul>
+<p><strong>Proportion of trace:</strong> These display the percentage separation achieved by each linear discriminant function.</p>
 </section>
-<section id="calling-functions" class="level2">
-<h2 class="anchored" data-anchor-id="calling-functions">2.4 Calling Functions</h2>
-<p>Try exploring the sample() function in the WebR code chunk below.</p>
-<p><em>Pro-tip: if you want to find out more about how to use a function you can type “?” in front of it to view the help information associated with it.</em></p>
+<section id="step-3-plot-training-data-lda" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-plot-training-data-lda">Step 3: Plot training data LDA</h2>
+<p>The code below generates a two-dimensional plot with our linear discriminants as the x and y axes. This is essentially a two-dimensional representation of our four-dimensional data (four predictor variables) that shows how the LDA clustered our observations of towns based on the severity of H1N1 outbreaks.</p>
 <div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>We can see from this plot that the high severity outbreak towns separate distinctly from the low and mid-level severity outbreak towns. This suggests that we are probably going to do a pretty good job predicting high severity outbreak areas, but might have a harder time distinguishing between low and mid-level severity areas.</p>
+<p>Let’s see what happens when we try to predict which the level of severity of outbreaks expected for new towns…</p>
 </section>
-<section id="exercises" class="level2">
-<h2 class="anchored" data-anchor-id="exercises">2.5 Exercises</h2>
-<p>Try the exercises from the text below. When you have completed them share a screenshot of your outputs for each question to get full points on your homework assignment for this week.</p>
-<ol type="1">
-<li><p>Why does this code not work?</p>
-<p><em>Edit the code so that it runs properly and provide a written response to the question as a comment in the WebR code chunk.</em></p>
+<section id="step-4-use-the-lda-model-to-make-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-use-the-lda-model-to-make-predictions">Step 4: Use the LDA model to make predictions</h2>
+<p>In addition to our known data set, we also have a data set of towns that have not yet experienced an outbreak (H1N1_unknown). We would like to predict the severity of a potential H1N1 outbreak in these unknown towns based on our predictor variables: availability of vaccines, travel metric, distance to the nearest outbreak, and medical awareness metric.</p>
+<p>We use the predict() function to do this. NOTE: This is a really handy function. It basically allows you to use (almost) any statistical model and predict across new values.</p>
 <div id="qwebr-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript></li>
-<li><p>Tweak each of the following R commands so that they run correctly:</p>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>This returns a list with three variables:</p>
+<ul>
+<li><p><strong>class:</strong> The predicted severity group</p></li>
+<li><p><strong>posterior:</strong> The <a href="https://www.statology.org/posterior-probability/">posterior probability</a> that an observation belongs to each severity group</p></li>
+<li><p><strong>x:</strong> The linear discriminants</p></li>
+</ul>
+<p>We can quickly view each of these results for the first six observations in our test dataset:</p>
 <div id="qwebr-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript></li>
-<li><p><em>We will skip this one since it’s specific to RStudio.</em></p></li>
-<li><p>Look at the following lines of code. Which of the two plots is saved as&nbsp;<code>mpg-plot.png</code>? Why?</p>
-<p><em>Write your response as a comment in the WebR code chunk.</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_bar_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> class)) <span class="sc">+</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>my_scatter_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename =</span> <span class="st">"mpg-plot.png"</span>, <span class="at">plot =</span> my_bar_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qwebr-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript></li>
-</ol>
-
-
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-9"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>So we have used our LDA to make predictions. The above functions are useful, but this is a case where it is easier to understand what happened by using a visualization.</p>
 </section>
+<section id="step-5-visualize-the-results" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-visualize-the-results">Step 5: Visualize the results</h2>
+<p>Let’s plot our LDA again, but this time let’s see where our new unknown towns landed compared to the towns we did know.</p>
+<div id="qwebr-insertion-location-10"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The darker triangles show us the predicted severity of outbreaks for the unknown towns, and where they fall in this two-dimensional depiction of all of our variables compared to the known towns.</p>
+</section>
+<section id="step-6-check-our-model" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-check-our-model">Step 6: Check our model</h2>
+<p>As the flu season progresses, we monitor the unknown towns to see if they have H1N1 outbreaks and then record the severity of the outbreak once it occurs. By collecting these data and getting the “true” answer, we can check to see how accurate our model was a predicting the severity of outbreaks.</p>
+<p>We actually already have this information stored in our H1N1_unknown data file, and we can test to see how accurate our model was using the code below:</p>
+<div id="qwebr-insertion-location-11"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>93.5% of the time we accurately predicted the level of severity of an H1N1 outbreak for new towns. That’s pretty good!</p>
+<p><em>What are some things we could do to improve the accuracy of our model?</em></p>
+<p>Hopefully you can see how this type of analysis might be useful in the real world for informing health science outcomes, but also many, many other fields.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>Much of this tutorial was pulled from: <a href="https://www.statology.org/linear-discriminant-analysis-in-r/">Linear Discriminant Analysis in R (Step-by-Step) (statology.org)</a></p>
+<p><em>Questions about implementing this tutorial? Contact Kayla Blincow at kaylamblincow@gmail.com</em>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
