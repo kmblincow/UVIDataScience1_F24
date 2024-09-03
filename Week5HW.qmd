@@ -25,11 +25,11 @@ library(ggplot2) #package allowing us to make plots
 library(palmerpenguins) #package containing our data
 ```
 
-For this tutorial we will be working with the Palmer Penguins dataset again.As a reminder, this dataset includes morphometric information on three different species of penguins across three different islands in Antarctica monitored by the Palmer Station Long Term Ecological Research study area. These data were made available by Dr. Kristen Gorman and were originally published in:
+For this tutorial we will be working with the Palmer Penguins data set again. As a reminder, this data set includes morphometric information on three different species of penguins across three different islands in Antarctica monitored by the Palmer Station Long Term Ecological Research study area. These data were made available by Dr. Kristen Gorman and were originally published in:
 
 > Gorman KB, Williams TD, Fraser WR (2014). Ecological sexual dimorphism and environmental variability within a community of Antarctic penguins (genus Pygoscelis). PLoS ONE 9(3):e90081. https://doi.org/10.1371/journal.pone.0090081
 
-##  Meet the penguins!
+## Meet the penguins!
 
 ![](images/lter_penguins.png)
 
