@@ -209,7 +209,7 @@ ggplot(data = plastic_waste,
 #WRITE YOUR ANSWER TO THE ABOVE QUESTION HERE AND SCREENSHOT
 ```
 
--   Recreate the plot pictured below. (HINT: The x-axis is a calculated variable. One country with plastic waste per capita over 3kg/day has been filtered out. And the data are not only represented with points on the plot but also a smooth curve. The "smooth" should help you [pick which geom to use](https:://ggplot2.tidyverse.org/reference/index.html#section-geoms).)
+-   Recreate the plot pictured below. (HINT: The x-axis is a calculated variable. One country with plastic waste per capita over 3kg/day has been filtered out. And the data are not only represented with points on the plot but also a smooth curve. The "smooth" should help you [pick which geom to use](https://ggplot2.tidyverse.org/reference/index.html).)
 
 ![](images/RecreatePlot.png)
 
