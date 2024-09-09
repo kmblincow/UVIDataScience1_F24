@@ -84,7 +84,7 @@ plastic_waste %>%
 
 Did you expect this result? You might consider doing some research on Trinidad and Tobago to see why plastic waste per capita is so high there, or whether this is a data error.
 
--   Plot, using histograms, the distribution of plastic waste per capita faceted by continent. (HINT: Have you watched the video for this week yet??)
+-   Plot, using histograms, the distribution of plastic waste per capita faceted by continent. (HINT: You might want to revisit the Mine's video from last week ;) )
 
 ```{webr-r}
 #ADD CODE HERE AND SCREENSHOT CODE/OUTPUT
