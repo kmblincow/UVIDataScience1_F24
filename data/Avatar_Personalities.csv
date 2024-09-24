@@ -1,0 +1,151 @@
+"","char_id","char_name","uni_id","uni_name","question","personality","avg_rating","rating_sd","number_ratings"
+"1","ALA1","Aang","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",88,17.4,65
+"2","ALA1","Aang","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",85.6,17.9,476
+"3","ALA1","Aang","ALA","Avatar: The Last Airbender","lenient/strict","lenient",83,16.9,572
+"4","ALA1","Aang","ALA","Avatar: The Last Airbender","deliberate/spontaneous","spontaneous",82.9,18.9,474
+"5","ALA1","Aang","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",76.4,24.9,110
+"6","ALA1","Aang","ALA","Avatar: The Last Airbender","competitive/cooperative","cooperative",76.2,26.6,548
+"7","ALA1","Aang","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",70.9,25.1,483
+"8","ALA1","Aang","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",67.8,26.8,93
+"9","ALA1","Aang","ALA","Avatar: The Last Airbender","assertive/passive","passive",65.7,28.9,518
+"10","ALA1","Aang","ALA","Avatar: The Last Airbender","dominant/submissive","submissive",59,24.8,495
+"11","ALA1","Aang","ALA","Avatar: The Last Airbender","anxious/calm","calm",58.7,27,477
+"12","ALA1","Aang","ALA","Avatar: The Last Airbender","neutral/opinionated","neutral",57.9,33.6,144
+"13","ALA1","Aang","ALA","Avatar: The Last Airbender","precise/vague","vague",56.1,27,338
+"14","ALA1","Aang","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",53.7,29.9,489
+"15","ALA1","Aang","ALA","Avatar: The Last Airbender","impatient/patient","impatient",50.8,34,240
+"16","ALA2","Zuko","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",89.2,20.6,65
+"17","ALA2","Zuko","ALA","Avatar: The Last Airbender","impatient/patient","impatient",83,18.8,233
+"18","ALA2","Zuko","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",82.4,23.4,117
+"19","ALA2","Zuko","ALA","Avatar: The Last Airbender","lenient/strict","strict",80.9,17.3,542
+"20","ALA2","Zuko","ALA","Avatar: The Last Airbender","competitive/cooperative","competitive",80.3,21.5,523
+"21","ALA2","Zuko","ALA","Avatar: The Last Airbender","assertive/passive","assertive",79.6,22.6,484
+"22","ALA2","Zuko","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",79.3,21.4,135
+"23","ALA2","Zuko","ALA","Avatar: The Last Airbender","anxious/calm","anxious",78.4,19.2,453
+"24","ALA2","Zuko","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",74.2,27.3,484
+"25","ALA2","Zuko","ALA","Avatar: The Last Airbender","flexible/rigid","rigid",71.9,23.4,502
+"26","ALA2","Zuko","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",71.1,25.8,559
+"27","ALA2","Zuko","ALA","Avatar: The Last Airbender","precise/vague","precise",67.7,26.1,377
+"28","ALA2","Zuko","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",66.1,28.8,96
+"29","ALA2","Zuko","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",64.5,31.3,518
+"30","ALA2","Zuko","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",57.2,29.6,477
+"31","ALA7","Iroh","ALA","Avatar: The Last Airbender","impatient/patient","patient",96.1,11.1,247
+"32","ALA7","Iroh","ALA","Avatar: The Last Airbender","anxious/calm","calm",94.4,10,462
+"33","ALA7","Iroh","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",94.1,13.5,114
+"34","ALA7","Iroh","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",88.7,16.9,459
+"35","ALA7","Iroh","ALA","Avatar: The Last Airbender","competitive/cooperative","cooperative",87.9,14.7,483
+"36","ALA7","Iroh","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",83.4,23.6,60
+"37","ALA7","Iroh","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",82.9,17.8,493
+"38","ALA7","Iroh","ALA","Avatar: The Last Airbender","lenient/strict","lenient",74.7,19.4,503
+"39","ALA7","Iroh","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",69.9,30.1,456
+"40","ALA7","Iroh","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",63.8,25,108
+"41","ALA7","Iroh","ALA","Avatar: The Last Airbender","assertive/passive","passive",63.2,27.8,512
+"42","ALA7","Iroh","ALA","Avatar: The Last Airbender","neutral/opinionated","neutral",61.6,31.7,127
+"43","ALA7","Iroh","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",54.7,25.6,511
+"44","ALA7","Iroh","ALA","Avatar: The Last Airbender","precise/vague","vague",54.5,32,365
+"45","ALA7","Iroh","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",52.9,32.6,439
+"46","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",90.1,13.8,520
+"47","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","assertive/passive","assertive",87.4,18.9,510
+"48","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",85.8,22,99
+"49","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",84.8,19.1,498
+"50","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",83.9,21,128
+"51","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","competitive/cooperative","competitive",83.7,19.6,512
+"52","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","anxious/calm","calm",77.1,22.3,466
+"53","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","impatient/patient","impatient",74.9,25.7,246
+"54","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",72.5,29.1,476
+"55","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","precise/vague","precise",72.4,26.5,375
+"56","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",71.8,31.6,64
+"57","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",71.3,29.5,116
+"58","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","flexible/rigid","rigid",63.9,29.4,503
+"59","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","lenient/strict","strict",61.4,31.5,525
+"60","ALA4","Toph Beifong","ALA","Avatar: The Last Airbender","deliberate/spontaneous","spontaneous",53.5,34.1,469
+"61","ALA3","Katara","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",89.2,13.2,63
+"62","ALA3","Katara","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",88.2,13.9,125
+"63","ALA3","Katara","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",88,13.8,482
+"64","ALA3","Katara","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",86.6,14.3,107
+"65","ALA3","Katara","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",84.4,18.6,123
+"66","ALA3","Katara","ALA","Avatar: The Last Airbender","mischievous/well behaved","well behaved",78.9,20.1,562
+"67","ALA3","Katara","ALA","Avatar: The Last Airbender","precise/vague","precise",76.9,19,403
+"68","ALA3","Katara","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",73.4,23.7,518
+"69","ALA3","Katara","ALA","Avatar: The Last Airbender","assertive/passive","assertive",72.3,22.7,482
+"70","ALA3","Katara","ALA","Avatar: The Last Airbender","impatient/patient","patient",70.6,25.3,243
+"71","ALA3","Katara","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",69.1,22.8,555
+"72","ALA3","Katara","ALA","Avatar: The Last Airbender","lenient/strict","strict",67.2,22.2,543
+"73","ALA3","Katara","ALA","Avatar: The Last Airbender","competitive/cooperative","cooperative",61.5,29.8,484
+"74","ALA3","Katara","ALA","Avatar: The Last Airbender","anxious/calm","calm",53.9,26.5,493
+"75","ALA3","Katara","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",53.7,28.5,450
+"76","ALA6","Azula","ALA","Avatar: The Last Airbender","competitive/cooperative","competitive",97.5,6.5,498
+"77","ALA6","Azula","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",96.7,6.6,121
+"78","ALA6","Azula","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",96.5,8.7,593
+"79","ALA6","Azula","ALA","Avatar: The Last Airbender","assertive/passive","assertive",95.7,12.2,545
+"80","ALA6","Azula","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",95,9.9,127
+"81","ALA6","Azula","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",94.9,13.3,68
+"82","ALA6","Azula","ALA","Avatar: The Last Airbender","lenient/strict","strict",93.5,12.3,521
+"83","ALA6","Azula","ALA","Avatar: The Last Airbender","precise/vague","precise",87.8,17.3,367
+"84","ALA6","Azula","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",86.5,21.5,479
+"85","ALA6","Azula","ALA","Avatar: The Last Airbender","impatient/patient","impatient",86.5,23.6,234
+"86","ALA6","Azula","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",86.5,24.6,103
+"87","ALA6","Azula","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",85.8,22.7,439
+"88","ALA6","Azula","ALA","Avatar: The Last Airbender","flexible/rigid","rigid",81.3,24,489
+"89","ALA6","Azula","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",78.8,28.2,463
+"90","ALA6","Azula","ALA","Avatar: The Last Airbender","anxious/calm","anxious",55.4,32.9,440
+"91","ALA5","Sokka","ALA","Avatar: The Last Airbender","impatient/patient","impatient",83.6,18,239
+"92","ALA5","Sokka","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",81.6,22.9,124
+"93","ALA5","Sokka","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",80.4,23.6,63
+"94","ALA5","Sokka","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",79.1,21.1,499
+"95","ALA5","Sokka","ALA","Avatar: The Last Airbender","anxious/calm","anxious",72.3,20.3,472
+"96","ALA5","Sokka","ALA","Avatar: The Last Airbender","deliberate/spontaneous","spontaneous",70.9,29.2,479
+"97","ALA5","Sokka","ALA","Avatar: The Last Airbender","assertive/passive","assertive",70.5,25.4,475
+"98","ALA5","Sokka","ALA","Avatar: The Last Airbender","competitive/cooperative","competitive",66.3,27.6,497
+"99","ALA5","Sokka","ALA","Avatar: The Last Airbender","lenient/strict","lenient",65.3,28.2,539
+"100","ALA5","Sokka","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",64.2,32.1,116
+"101","ALA5","Sokka","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",63.8,28.2,112
+"102","ALA5","Sokka","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","disorganized",61.6,30.7,471
+"103","ALA5","Sokka","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",58.6,30,499
+"104","ALA5","Sokka","ALA","Avatar: The Last Airbender","precise/vague","vague",54.1,28.4,380
+"105","ALA5","Sokka","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",52,28.3,521
+"106","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",97.1,8.3,500
+"107","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","lenient/strict","strict",96.9,7.4,491
+"108","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","neutral/opinionated","opinionated",96.3,7.6,137
+"109","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","competitive/cooperative","competitive",95.4,12.6,472
+"110","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","assertive/passive","assertive",95.3,11.7,497
+"111","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","flexible/rigid","rigid",93.4,11.7,459
+"112","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",92.1,13.4,105
+"113","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",90.4,16.7,71
+"114","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",89.5,17.4,464
+"115","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",86.6,19.6,419
+"116","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","impatient/patient","impatient",85.9,22.1,207
+"117","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","precise/vague","precise",83.1,21.5,339
+"118","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",74.8,26.6,100
+"119","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",73.1,33.7,468
+"120","ALA8","Firelord Ozai","ALA","Avatar: The Last Airbender","anxious/calm","calm",54,33.2,441
+"121","ALA10","Hakoda","ALA","Avatar: The Last Airbender","anxious/calm","calm",83.2,14.9,369
+"122","ALA10","Hakoda","ALA","Avatar: The Last Airbender","impatient/patient","patient",83,16.4,159
+"123","ALA10","Hakoda","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",82.7,15.2,342
+"124","ALA10","Hakoda","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",80.3,21.1,49
+"125","ALA10","Hakoda","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",78.9,18.9,80
+"126","ALA10","Hakoda","ALA","Avatar: The Last Airbender","competitive/cooperative","cooperative",76.8,20.4,398
+"127","ALA10","Hakoda","ALA","Avatar: The Last Airbender","deliberate/spontaneous","deliberate",75.5,22.8,326
+"128","ALA10","Hakoda","ALA","Avatar: The Last Airbender","mischievous/well behaved","well behaved",69.4,25.5,367
+"129","ALA10","Hakoda","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",68.7,21.4,86
+"130","ALA10","Hakoda","ALA","Avatar: The Last Airbender","dominant/submissive","dominant",65.3,25.1,379
+"131","ALA10","Hakoda","ALA","Avatar: The Last Airbender","precise/vague","precise",64.7,25.6,273
+"132","ALA10","Hakoda","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",61.5,22,313
+"133","ALA10","Hakoda","ALA","Avatar: The Last Airbender","assertive/passive","assertive",61.1,28.2,328
+"134","ALA10","Hakoda","ALA","Avatar: The Last Airbender","lenient/strict","lenient",57.4,22.4,371
+"135","ALA10","Hakoda","ALA","Avatar: The Last Airbender","neutral/opinionated","neutral",51.2,28.8,118
+"136","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","flexible/rigid","flexible",91.3,13.6,496
+"137","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","deliberate/spontaneous","spontaneous",82.3,21.8,417
+"138","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","lenient/strict","lenient",82.3,17.4,479
+"139","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","motivated/unmotivated","motivated",75.5,25.1,55
+"140","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","mischievous/well behaved","mischievous",75.3,24.9,466
+"141","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","overachiever/underachiever","overachiever",70.1,25,104
+"142","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","perceptive/unobservant","perceptive",67.3,27.7,109
+"143","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","anxious/calm","calm",66,27.1,445
+"144","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","dominant/submissive","submissive",64.9,27.7,485
+"145","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","competitive/cooperative","cooperative",63.3,30.4,417
+"146","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","assertive/passive","passive",59.2,27.5,394
+"147","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","disorganized/self-disciplined","self-disciplined",57.8,30.7,396
+"148","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","neutral/opinionated","neutral",57.3,32.2,107
+"149","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","precise/vague","precise",56.1,32,290
+"150","ALA9","Ty Lee","ALA","Avatar: The Last Airbender","impatient/patient","impatient",52,32.4,185
