@@ -13,7 +13,7 @@ This website houses all of the coding exercises and assignments for CSC/SCI 230 
 # Schedule
 
 |        Week         |     Dates     |                                                         Materials                                                         |
-|:-----------:|:-----------:|:----------------------------------:|
+|:-------------------:|:-------------:|:-------------------------------------------------------------------------------------------------------------------------:|
 |          1          |  8/19 - 8/23  |                                                [Homework 1](Week1R4DS.qmd)                                                |
 |          2          |  8/26 - 8/30  |                                                 [Homework 2](Week2HW.qmd)                                                 |
 |          3          |   9/3 - 9/6   |                                                 [Homework 3](Week3HW.qmd)                                                 |
